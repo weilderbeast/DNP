@@ -45,6 +45,39 @@
         }
       },
       {
+        "HashCode": -1961200450,
+        "Kind": "Components.Component",
+        "Name": "Assignment1.Pages.Adults",
+        "AssemblyName": "Assignment1",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Adults"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Assignment1.Pages.Adults"
+        }
+      },
+      {
+        "HashCode": 1765548595,
+        "Kind": "Components.Component",
+        "Name": "Assignment1.Pages.Adults",
+        "AssemblyName": "Assignment1",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Assignment1.Pages.Adults"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Assignment1.Pages.Adults",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
         "HashCode": 938004689,
         "Kind": "Components.Component",
         "Name": "Assignment1.Pages.Login",
@@ -111,35 +144,35 @@
         }
       },
       {
-        "HashCode": -1961200450,
+        "HashCode": -429847309,
         "Kind": "Components.Component",
-        "Name": "Assignment1.Pages.Adults",
+        "Name": "Assignment1.App",
         "AssemblyName": "Assignment1",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "Adults"
+            "TagName": "App"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Assignment1.Pages.Adults"
+          "Common.TypeName": "Assignment1.App"
         }
       },
       {
-        "HashCode": 1765548595,
+        "HashCode": -64009004,
         "Kind": "Components.Component",
-        "Name": "Assignment1.Pages.Adults",
+        "Name": "Assignment1.App",
         "AssemblyName": "Assignment1",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "Assignment1.Pages.Adults"
+            "TagName": "Assignment1.App"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Assignment1.Pages.Adults",
+          "Common.TypeName": "Assignment1.App",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -213,6 +246,39 @@
         }
       },
       {
+        "HashCode": 948465444,
+        "Kind": "Components.Component",
+        "Name": "Assignment1.Shared.Components.FamilyList.FamilyList",
+        "AssemblyName": "Assignment1",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "FamilyList"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Assignment1.Shared.Components.FamilyList.FamilyList"
+        }
+      },
+      {
+        "HashCode": 1150511889,
+        "Kind": "Components.Component",
+        "Name": "Assignment1.Shared.Components.FamilyList.FamilyList",
+        "AssemblyName": "Assignment1",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Assignment1.Shared.Components.FamilyList.FamilyList"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Assignment1.Shared.Components.FamilyList.FamilyList",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
         "HashCode": 1241450337,
         "Kind": "Components.Component",
         "Name": "Assignment1.Shared.Components.FamilyList.FamilyListing",
@@ -262,39 +328,6 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "Assignment1.Shared.Components.FamilyList.FamilyListing",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": 948465444,
-        "Kind": "Components.Component",
-        "Name": "Assignment1.Shared.Components.FamilyList.FamilyList",
-        "AssemblyName": "Assignment1",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "FamilyList"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Assignment1.Shared.Components.FamilyList.FamilyList"
-        }
-      },
-      {
-        "HashCode": 1150511889,
-        "Kind": "Components.Component",
-        "Name": "Assignment1.Shared.Components.FamilyList.FamilyList",
-        "AssemblyName": "Assignment1",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Assignment1.Shared.Components.FamilyList.FamilyList"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Assignment1.Shared.Components.FamilyList.FamilyList",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -365,35 +398,98 @@
         }
       },
       {
-        "HashCode": -429847309,
+        "HashCode": 781675432,
         "Kind": "Components.Component",
-        "Name": "Assignment1.App",
+        "Name": "Assignment1.Shared.MainLayout",
         "AssemblyName": "Assignment1",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "App"
+            "TagName": "MainLayout"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Body",
+            "TypeName": "Microsoft.AspNetCore.Components.RenderFragment",
+            "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Body",
+              "Components.ChildContent": "True"
+            }
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Assignment1.App"
+          "Common.TypeName": "Assignment1.Shared.MainLayout"
         }
       },
       {
-        "HashCode": -64009004,
+        "HashCode": 1729518371,
         "Kind": "Components.Component",
-        "Name": "Assignment1.App",
+        "Name": "Assignment1.Shared.MainLayout",
         "AssemblyName": "Assignment1",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "Assignment1.App"
+            "TagName": "Assignment1.Shared.MainLayout"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Body",
+            "TypeName": "Microsoft.AspNetCore.Components.RenderFragment",
+            "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Body",
+              "Components.ChildContent": "True"
+            }
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Assignment1.App",
+          "Common.TypeName": "Assignment1.Shared.MainLayout",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 1468118293,
+        "Kind": "Components.ChildContent",
+        "Name": "Assignment1.Shared.MainLayout.Body",
+        "AssemblyName": "Assignment1",
+        "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Body",
+            "ParentTag": "MainLayout"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.None",
+          "Common.TypeName": "Assignment1.Shared.MainLayout.Body",
+          "Components.IsSpecialKind": "Components.ChildContent"
+        }
+      },
+      {
+        "HashCode": 1317400553,
+        "Kind": "Components.ChildContent",
+        "Name": "Assignment1.Shared.MainLayout.Body",
+        "AssemblyName": "Assignment1",
+        "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Body",
+            "ParentTag": "Assignment1.Shared.MainLayout"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.None",
+          "Common.TypeName": "Assignment1.Shared.MainLayout.Body",
+          "Components.IsSpecialKind": "Components.ChildContent",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },

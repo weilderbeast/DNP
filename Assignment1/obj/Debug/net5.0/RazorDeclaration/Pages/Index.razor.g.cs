@@ -82,6 +82,27 @@ using Assignment1.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 1 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\Pages\Index.razor"
+using Assignment1.Shared.Components.NavMenu;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 2 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\Pages\Index.razor"
+using Assignment1.Shared.Components.SideBar;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 3 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\Pages\Index.razor"
+using Assignment1.Shared.Components.FamilyList;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/")]
     public partial class Index : Microsoft.AspNetCore.Components.ComponentBase
     {

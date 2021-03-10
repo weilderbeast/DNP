@@ -115,7 +115,7 @@ using Assignment1.Data.Persistence;
         Filter(new ChangeEventArgs());
     }
     private void Filter(ChangeEventArgs args){
-        string? filterByName = null;
+        string filterByName = null;
         try{
             filterByName = args.Value?.ToString();
         } catch (Exception e){

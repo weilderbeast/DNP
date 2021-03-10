@@ -71,3 +71,4 @@ C:\Users\cirst\RiderProjects\Assignment1\Assignment1\obj\Debug\net5.0\RazorDecla
 C:\Users\cirst\RiderProjects\Assignment1\Assignment1\obj\Debug\net5.0\Razor\Pages\Sample.razor.g.cs
 C:\Users\cirst\RiderProjects\Assignment1\Assignment1\obj\Debug\net5.0\RazorDeclaration\Pages\Adults.razor.g.cs
 C:\Users\cirst\RiderProjects\Assignment1\Assignment1\obj\Debug\net5.0\Razor\Pages\Adults.razor.g.cs
+C:\Users\cirst\RiderProjects\Assignment1\Assignment1\obj\Debug\net5.0\scopedcss\Pages\Index.razor.rz.scp.css

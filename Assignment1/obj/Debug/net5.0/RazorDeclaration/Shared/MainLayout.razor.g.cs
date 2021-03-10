@@ -82,27 +82,6 @@ using Assignment1.Shared;
 #line default
 #line hidden
 #nullable disable
-#nullable restore
-#line 2 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\Shared\MainLayout.razor"
-using Assignment1.Shared.Components.NavMenu;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
-#line 3 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\Shared\MainLayout.razor"
-using Assignment1.Shared.Components.SideBar;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
-#line 4 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\Shared\MainLayout.razor"
-using Assignment1.Shared.Components.FamilyList;
-
-#line default
-#line hidden
-#nullable disable
     public partial class MainLayout : LayoutComponentBase
     {
         #pragma warning disable 1998
