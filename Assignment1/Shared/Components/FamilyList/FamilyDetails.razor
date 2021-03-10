@@ -1,0 +1,100 @@
+@using Data.Models;
+
+
+@if (Open)
+{
+    <div class="family-details">
+        <div class="family-adults">
+            <span><b>Adults</b></span><br>
+            @if(Family.Adults.Any()){
+                @foreach (var adult in Family.Adults)
+                {
+                    <div class="adult">
+                        <b>@adult.FirstName @adult.LastName</b> - @adult.JobTitle.JobTitle <br>
+                        <div style="padding-left: 15px">
+                            <b>Eye color</b> - @adult.EyeColor <br>
+                            <b>Hair color</b> - @adult.HairColor <br>
+                            <b>Age</b> - @adult.Age yo <br>
+                            <b>Weight</b> - @adult.Weight kg<br>
+                            <b>Sex</b> - @adult.Sex <br>
+                        </div>
+                    </div>
+                }
+            } else {
+                <div>
+                    No adults
+                </div>
+            }
+            
+        </div>
+        <div class="family-children">
+            <span><b>Children</b></span><br>
+            @if(Family.Children.Any())
+            {
+                @foreach (var child in Family.Children)
+                {
+                    <div class="child">
+                        <b>@child.FirstName @child.LastName</b><br>
+                        <div style="padding-left: 15px">
+                            <b>Eye color</b> - @child.EyeColor <br>
+                            <b>Hair color</b> - @child.HairColor <br>
+                            <b>Age</b> - @child.Age yo<br>
+                            <b>Weight</b> - @child.Weight kg<br>
+                            <b>Sex</b> - @child.Sex <br>
+                            <b>Interests</b> <br>
+                            <div style="padding-left: 15px;">
+                                @if(child.Interests.Any())
+                                {
+                                    @foreach (var interest in child.Interests)
+                                    {
+                                        <b>@interest.Type</b> <span> - @interest.Description</span><br>
+                                    }
+                                }
+                                else {
+                                    <div>
+                                        No Interests
+                                    </div>
+                                    
+                                }
+                            </div>
+                        </div>
+                    </div>
+                }
+            } else {
+                <div>
+                    No children
+                </div>
+            }
+            
+        </div>
+        <div class="family-pets">
+            <span><b>Pets</b></span><br>
+            @if(Family.Pets.Any())
+            {
+                @foreach (var pet in Family.Pets)
+                {
+                    <div class="pet">
+                        <b>@pet.Name</b> - @pet.Species, @pet.Age yo
+                    </div>
+                }
+            } else {
+                <div>
+                    No pets
+                </div>
+            }
+
+        </div>
+    </div>
+}
+else
+{
+    <div></div>
+}
+
+@code{
+    [Parameter]
+    public bool Open { get; set; }
+
+    [Parameter]
+    public Family Family { get; set; }
+}

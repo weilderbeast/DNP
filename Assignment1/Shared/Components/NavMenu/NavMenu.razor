@@ -1,0 +1,36 @@
+@inject NavigationManager NavigationManager
+
+<div class="nav">
+    <ul class="nav-ul">
+        <li class="nav-item">
+            <div class="item-content">
+                Home
+            </div>
+        </li>
+        <li class="nav-item">
+            <div class="item-content">
+                <a href="Adults">
+                    Adults
+                </a>
+            </div>
+        </li>
+        <li class="nav-item">
+            <div class="item-content">
+                Children
+            </div>
+        </li>
+        <li class="nav-item">
+            <div class="item-content">
+                Pets
+            </div>
+        </li>
+    </ul>
+</div>
+
+
+@code{
+    private void GoTo()
+    {
+        NavigationManager.NavigateTo("/Adults");
+    }
+}

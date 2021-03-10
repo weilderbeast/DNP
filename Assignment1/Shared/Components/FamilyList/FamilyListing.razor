@@ -1,0 +1,46 @@
+@using Data.Models;
+
+
+<div class="@cssClass" @onclick="openDetails">
+    
+    <span>
+        @if(!isOpen){
+            <img src="/icons/down-arrow.svg" height="12" width="12">
+        } else {
+            <img src="/icons/down-arrow.svg" height="12" width="12" style="transform: rotate(180deg) scaleX(-1);">
+        }
+        
+    </span>
+    <div class="family-name">
+        @Family.Adults[0].LastName
+    </div>
+    <div class="family-address">
+        @Family.StreetName
+    </div>
+    <div class="family-count">
+        @Family.Children.Count kids,
+        @Family.Pets.Count pets
+    </div>
+</div>
+<FamilyDetails Open=@isOpen Family=@Family />
+
+
+@code{
+    [Parameter]
+    public Family Family { get; set; }
+    private bool isOpen = false;
+    private string cssClass = "family-item .";
+
+    public void openDetails()
+    {
+        isOpen = !isOpen;
+        if (isOpen)
+        {
+            cssClass = cssClass.Replace(".", "open");
+        }
+        else
+        {
+            cssClass = cssClass.Replace("open", ".");
+        }
+    }
+}

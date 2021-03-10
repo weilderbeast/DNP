@@ -1,0 +1,15 @@
+.family-details[b-h04aw7lyl6]{
+    background-color: rgba(255, 255, 255, .3);
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.family-adults[b-h04aw7lyl6], .family-children[b-h04aw7lyl6], .family-pets[b-h04aw7lyl6]{
+    padding-left: 15px;
+    padding-bottom: 15px;
+}
+
+.adult[b-h04aw7lyl6], .child[b-h04aw7lyl6], .pet[b-h04aw7lyl6]{
+    padding-top: 8px;
+}
