@@ -112,12 +112,12 @@ using Assignment1.Data.Persistence;
     protected override async Task OnInitializedAsync()
     {
         families = files.Families;
-        Filter(null);
+        Filter(new ChangeEventArgs());
     }
     private void Filter(ChangeEventArgs args){
         string? filterByName = null;
         try{
-            filterByName = args.Value.ToString();
+            filterByName = args.Value?.ToString();
         } catch (Exception e){
             System.Console.WriteLine(e);
         }

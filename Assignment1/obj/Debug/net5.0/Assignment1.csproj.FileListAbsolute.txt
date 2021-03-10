@@ -64,9 +64,10 @@ C:\Users\cirst\RiderProjects\Assignment1\Assignment1\obj\Debug\net5.0\Razor\Shar
 C:\Users\cirst\RiderProjects\Assignment1\Assignment1\obj\Debug\net5.0\scopedcss\Shared\Components\FamilyList\FamilyListing.razor.rz.scp.css
 C:\Users\cirst\RiderProjects\Assignment1\Assignment1\bin\Debug\net5.0\families.json
 C:\Users\cirst\RiderProjects\Assignment1\Assignment1\obj\Debug\net5.0\Razor\Pages\Random.cshtml.g.cs
-C:\Users\cirst\RiderProjects\Assignment1\Assignment1\obj\Debug\net5.0\Razor\Pages\Adults.cshtml.g.cs
 C:\Users\cirst\RiderProjects\Assignment1\Assignment1\bin\Debug\net5.0\adults.json
 C:\Users\cirst\RiderProjects\Assignment1\Assignment1\obj\Debug\net5.0\RazorDeclaration\Pages\Login.razor.g.cs
 C:\Users\cirst\RiderProjects\Assignment1\Assignment1\obj\Debug\net5.0\Razor\Pages\Login.razor.g.cs
 C:\Users\cirst\RiderProjects\Assignment1\Assignment1\obj\Debug\net5.0\RazorDeclaration\Pages\Sample.razor.g.cs
 C:\Users\cirst\RiderProjects\Assignment1\Assignment1\obj\Debug\net5.0\Razor\Pages\Sample.razor.g.cs
+C:\Users\cirst\RiderProjects\Assignment1\Assignment1\obj\Debug\net5.0\RazorDeclaration\Pages\Adults.razor.g.cs
+C:\Users\cirst\RiderProjects\Assignment1\Assignment1\obj\Debug\net5.0\Razor\Pages\Adults.razor.g.cs
