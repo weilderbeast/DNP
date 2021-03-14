@@ -96,6 +96,13 @@ using Assignment1.Data.Persistence;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\Shared\Components\FamilyList\FamilyList.razor"
+           [Authorize]
+
+#line default
+#line hidden
+#nullable disable
     public partial class FamilyList : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -104,30 +111,39 @@ using Assignment1.Data.Persistence;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 23 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\Shared\Components\FamilyList\FamilyList.razor"
+#line 24 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\Shared\Components\FamilyList\FamilyList.razor"
       
     private IList<Family> families = new List<Family>();
     private IList<Family> filteredFamilies = new List<Family>();
     private FileContext files = new FileContext();
+
     protected override async Task OnInitializedAsync()
     {
         families = files.Families;
         Filter(new ChangeEventArgs());
     }
-    private void Filter(ChangeEventArgs args){
+
+    private void Filter(ChangeEventArgs args)
+    {
         string filterByName = null;
-        try{
+        try
+        {
             filterByName = args.Value?.ToString();
-        } catch (Exception e){
+        }
+        catch (Exception e)
+        {
             System.Console.WriteLine(e);
         }
-        if(filterByName != null && !filterByName.Equals("")){   
+        if (filterByName != null && !filterByName.Equals(""))
+        {
             filteredFamilies = families.Where(t => t.Adults[0].LastName.Contains(filterByName)).ToList();
-        } else {
+        }
+        else
+        {
             filteredFamilies = families;
         }
     }
-    
+
 
 #line default
 #line hidden

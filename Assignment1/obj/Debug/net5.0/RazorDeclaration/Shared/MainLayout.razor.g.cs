@@ -89,6 +89,26 @@ using Assignment1.Shared;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 9 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\Shared\MainLayout.razor"
+       
+    [CascadingParameter] protected Task<AuthenticationState> _task { get; set; }
+
+    protected async override Task OnInitializedAsync()
+    {
+        base.OnInitialized();
+        var user = (await _task).User;
+        if (!user.Identity.IsAuthenticated)
+        {
+            NavigationManager.NavigateTo($"/login");
+        }
+    }
+
+
+#line default
+#line hidden
+#nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager NavigationManager { get; set; }
     }
 }
 #pragma warning restore 1591

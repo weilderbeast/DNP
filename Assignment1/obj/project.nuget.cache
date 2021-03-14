@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Ir1I7ub8C8B1z6p/c/RrFLV34mKphPs4tXJ0a2LuItBmIOtisRz2RMT2WnQqOdm662BYGHjFyTJmw5Kx3Y3qUQ==",
+  "dgSpecHash": "6gDXDSeEi0PxXusZgyGBeT/JR75G7gIiJGuAdivTCh2lsbuic/Q2kO6TCzDE7PDvye2cJXG0LBKBz9fV8gDKOQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\cirst\\RiderProjects\\Assignment1\\Assignment1\\Assignment1.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\cirst\\.nuget\\packages\\microsoft.aspnetcore.authentication.google\\5.0.4\\microsoft.aspnetcore.authentication.google.5.0.4.nupkg.sha512"
+  ],
   "logs": []
 }

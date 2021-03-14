@@ -1,4 +1,5 @@
 ﻿@inherits LayoutComponentBase
+@inject NavigationManager NavigationManager;
 
 <div>
     @Body
@@ -6,5 +7,16 @@
 
 
 @code {
+    [CascadingParameter] protected Task<AuthenticationState> _task { get; set; }
+
+    protected async override Task OnInitializedAsync()
+    {
+        base.OnInitialized();
+        var user = (await _task).User;
+        if (!user.Identity.IsAuthenticated)
+        {
+            NavigationManager.NavigateTo($"/login");
+        }
+    }
 
 }

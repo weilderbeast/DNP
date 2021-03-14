@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace Assignment1.Pages
+namespace Assignment1.Pages.Login
 {
     #line hidden
     using System;
@@ -82,14 +82,56 @@ using Assignment1.Shared;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/Sample")]
-    public partial class Sample : Microsoft.AspNetCore.Components.ComponentBase
+#nullable restore
+#line 2 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\Pages\Login\Login.razor"
+using Assignment1.Data.Login;
+
+#line default
+#line hidden
+#nullable disable
+    [Microsoft.AspNetCore.Components.RouteAttribute("/Login")]
+    public partial class Login : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 35 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\Pages\Login\Login.razor"
+      
+
+    private string username;
+    private string password;
+    private string errorMessage;
+
+    public async Task LoginTask() {
+        errorMessage = "";
+        try {
+            ((CustomAuthProvider) AuthenticationStateProvider).ValidateLogin(username, password);
+            username = "";
+            password = "";
+        } catch (Exception e) {
+            errorMessage = e.Message;
+        }
+    }
+
+    public async Task Logout() {
+        errorMessage = "";
+        username = "";
+        password = "";
+        try {
+            ((CustomAuthProvider) AuthenticationStateProvider).Logout();
+            NavigationManager.NavigateTo("/");
+        } catch (Exception e) { }
+    }
+
+
+#line default
+#line hidden
+#nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager NavigationManager { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private AuthenticationStateProvider AuthenticationStateProvider { get; set; }
     }
 }
 #pragma warning restore 1591

@@ -1,0 +1,62 @@
+@page "/Login"
+@using Assignment1.Data.Login
+
+@inject AuthenticationStateProvider AuthenticationStateProvider;
+@inject NavigationManager NavigationManager;
+
+<AuthorizeView>
+    <NotAuthorized>
+        <div class="main">
+            <div class="login">
+                <div class="title">
+                    <img src="../../icons/linux.svg" width="64" height="64">
+                    Assignment 1
+                </div>
+                <div class="login-form">
+                    <form>
+                        <input type="text" placeholder="username" @bind-value="username">
+                        <input type="text" placeholder="password" @bind-value="password">
+                        <button type="submit" class="login-button" @onclick="LoginTask">Log in</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </NotAuthorized>
+    <Authorized>
+        @if (true)
+        {
+            NavigationManager.NavigateTo("/");
+        }
+    </Authorized>
+</AuthorizeView>
+
+
+@code{
+
+    private string username;
+    private string password;
+    private string errorMessage;
+
+    public async Task LoginTask() {
+        errorMessage = "";
+        try {
+            ((CustomAuthProvider) AuthenticationStateProvider).ValidateLogin(username, password);
+            username = "";
+            password = "";
+        } catch (Exception e) {
+            errorMessage = e.Message;
+        }
+    }
+
+    public async Task Logout() {
+        errorMessage = "";
+        username = "";
+        password = "";
+        try {
+            ((CustomAuthProvider) AuthenticationStateProvider).Logout();
+            NavigationManager.NavigateTo("/");
+        } catch (Exception e) { }
+    }
+
+}

@@ -103,6 +103,13 @@ using Assignment1.Shared.Components.FamilyList;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 4 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\Pages\Index.razor"
+           [Authorize]
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/")]
     public partial class Index : Microsoft.AspNetCore.Components.ComponentBase
     {

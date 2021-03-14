@@ -12,6 +12,39 @@
   "ProjectWorkspaceState": {
     "TagHelpers": [
       {
+        "HashCode": 525398743,
+        "Kind": "Components.Component",
+        "Name": "Assignment1.Pages.Adults.Adults",
+        "AssemblyName": "Assignment1",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Adults"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Assignment1.Pages.Adults.Adults"
+        }
+      },
+      {
+        "HashCode": -807908887,
+        "Kind": "Components.Component",
+        "Name": "Assignment1.Pages.Adults.Adults",
+        "AssemblyName": "Assignment1",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Assignment1.Pages.Adults.Adults"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Assignment1.Pages.Adults.Adults",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
         "HashCode": 327041827,
         "Kind": "Components.Component",
         "Name": "Assignment1.Pages.Index",
@@ -45,42 +78,9 @@
         }
       },
       {
-        "HashCode": -1961200450,
+        "HashCode": 226581822,
         "Kind": "Components.Component",
-        "Name": "Assignment1.Pages.Adults",
-        "AssemblyName": "Assignment1",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Adults"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Assignment1.Pages.Adults"
-        }
-      },
-      {
-        "HashCode": 1765548595,
-        "Kind": "Components.Component",
-        "Name": "Assignment1.Pages.Adults",
-        "AssemblyName": "Assignment1",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Assignment1.Pages.Adults"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Assignment1.Pages.Adults",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": 938004689,
-        "Kind": "Components.Component",
-        "Name": "Assignment1.Pages.Login",
+        "Name": "Assignment1.Pages.Login.Login",
         "AssemblyName": "Assignment1",
         "CaseSensitive": true,
         "TagMatchingRules": [
@@ -90,56 +90,23 @@
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Assignment1.Pages.Login"
+          "Common.TypeName": "Assignment1.Pages.Login.Login"
         }
       },
       {
-        "HashCode": -1797085351,
+        "HashCode": -1902771670,
         "Kind": "Components.Component",
-        "Name": "Assignment1.Pages.Login",
+        "Name": "Assignment1.Pages.Login.Login",
         "AssemblyName": "Assignment1",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "Assignment1.Pages.Login"
+            "TagName": "Assignment1.Pages.Login.Login"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Assignment1.Pages.Login",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": -539897097,
-        "Kind": "Components.Component",
-        "Name": "Assignment1.Pages.Sample",
-        "AssemblyName": "Assignment1",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Sample"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Assignment1.Pages.Sample"
-        }
-      },
-      {
-        "HashCode": -951330592,
-        "Kind": "Components.Component",
-        "Name": "Assignment1.Pages.Sample",
-        "AssemblyName": "Assignment1",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Assignment1.Pages.Sample"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Assignment1.Pages.Sample",
+          "Common.TypeName": "Assignment1.Pages.Login.Login",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -16085,14 +16052,9 @@
   "RootNamespace": "Assignment1",
   "Documents": [
     {
-      "FilePath": "c:\\Users\\cirst\\RiderProjects\\Assignment1\\Assignment1\\Pages\\_Host.cshtml",
-      "TargetPath": "Pages\\_Host.cshtml",
+      "FilePath": "c:\\Users\\cirst\\RiderProjects\\Assignment1\\Assignment1\\Pages\\Common\\Error.cshtml",
+      "TargetPath": "Pages\\Common\\Error.cshtml",
       "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\cirst\\RiderProjects\\Assignment1\\Assignment1\\Pages\\Sample.razor",
-      "TargetPath": "Pages\\Sample.razor",
-      "FileKind": "component"
     },
     {
       "FilePath": "c:\\Users\\cirst\\RiderProjects\\Assignment1\\Assignment1\\Shared\\Components\\FamilyList\\FamilyListing.razor",
@@ -16100,8 +16062,8 @@
       "FileKind": "component"
     },
     {
-      "FilePath": "c:\\Users\\cirst\\RiderProjects\\Assignment1\\Assignment1\\Pages\\Login.razor",
-      "TargetPath": "Pages\\Login.razor",
+      "FilePath": "c:\\Users\\cirst\\RiderProjects\\Assignment1\\Assignment1\\Pages\\Adults\\Adults.razor",
+      "TargetPath": "Pages\\Adults\\Adults.razor",
       "FileKind": "component"
     },
     {
@@ -16135,14 +16097,9 @@
       "FileKind": "component"
     },
     {
-      "FilePath": "c:\\Users\\cirst\\RiderProjects\\Assignment1\\Assignment1\\Pages\\Random.cshtml",
-      "TargetPath": "Pages\\Random.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\cirst\\RiderProjects\\Assignment1\\Assignment1\\Pages\\Error.cshtml",
-      "TargetPath": "Pages\\Error.cshtml",
-      "FileKind": "mvc"
+      "FilePath": "c:\\Users\\cirst\\RiderProjects\\Assignment1\\Assignment1\\Pages\\Login\\Login.razor",
+      "TargetPath": "Pages\\Login\\Login.razor",
+      "FileKind": "component"
     },
     {
       "FilePath": "c:\\Users\\cirst\\RiderProjects\\Assignment1\\Assignment1\\Shared\\Components\\NavMenu\\NavMenu.razor",
@@ -16150,14 +16107,19 @@
       "FileKind": "component"
     },
     {
-      "FilePath": "c:\\Users\\cirst\\RiderProjects\\Assignment1\\Assignment1\\Pages\\Adults.razor",
-      "TargetPath": "Pages\\Adults.razor",
-      "FileKind": "component"
+      "FilePath": "c:\\Users\\cirst\\RiderProjects\\Assignment1\\Assignment1\\Pages\\Common\\Random.cshtml",
+      "TargetPath": "Pages\\Common\\Random.cshtml",
+      "FileKind": "mvc"
     },
     {
       "FilePath": "c:\\Users\\cirst\\RiderProjects\\Assignment1\\Assignment1\\Shared\\Components\\FamilyList\\FamilyList.razor",
       "TargetPath": "Shared\\Components\\FamilyList\\FamilyList.razor",
       "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\cirst\\RiderProjects\\Assignment1\\Assignment1\\Pages\\Common\\_Host.cshtml",
+      "TargetPath": "Pages\\Common\\_Host.cshtml",
+      "FileKind": "mvc"
     }
   ],
   "SerializationFormat": "0.2"
