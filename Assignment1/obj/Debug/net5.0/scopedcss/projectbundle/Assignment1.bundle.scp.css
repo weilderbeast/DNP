@@ -1,14 +1,119 @@
 @import '';
 
+/* _content/Assignment1/Pages/Adults/Adults.razor.rz.scp.css */
+.main[b-wohj4zlpcx]{
+    background-color: #0B0E11;
+    max-width: 100vw;
+    height: 100vh;
+    padding:10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.adults[b-wohj4zlpcx]{
+    width: 100vw;
+    height: 70vh;
+    padding:20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 2;
+}
+
+.adults-title[b-wohj4zlpcx]{
+    font-size: 50px;
+    font-weight: bolder;
+    margin-bottom: 15px;
+}
+
+.adult-form[b-wohj4zlpcx]{
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: stretch;
+    width: 65%;
+}
+
+.form-section[b-wohj4zlpcx]{
+    width: 33%;
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: stretch;
+}
+
+.adult-form-fields[b-wohj4zlpcx]{
+    width: 100%;
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: flex-start;
+	align-content: stretch;
+}
+
+button[b-wohj4zlpcx]{
+    background: #FD4D4D;
+    border: none;
+    border-radius: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: white;
+    outline: none;
+    width: 140px;
+    margin-top: 20px;
+}
+
+button:hover[b-wohj4zlpcx]{
+    filter: brightness(1.3);
+}
+
+.form-group[b-wohj4zlpcx]{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.label[b-wohj4zlpcx]{
+    color: white;
+}
+
+.input[b-wohj4zlpcx]{
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    border-radius: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: white;
+    outline: none;
+}
+
+.input:hover[b-wohj4zlpcx]{
+    filter: brightness(1.3);
+}
+
+[b-wohj4zlpcx]::placeholder{
+    color: white;
+}
 /* _content/Assignment1/Pages/Index.razor.rz.scp.css */
 *[b-aqnaetzrkf]{
     transition: .2s all;
 }
 
 .main[b-aqnaetzrkf]{
-    background-image: url('/images/family.jpg');
-    background-size: cover;
-    background-position: top;
+    background-color: #0B0E11;
     display: flex;
 	flex-direction: column;
 	flex-wrap: nowrap;
@@ -211,7 +316,7 @@ input[b-gd4i8e0irs]{
 }
 
 .input-field[b-riyneo3lt9]{
-    background: rgba(255, 255, 255, 0.3);
+    background: #FD4D4D;
     border: none;
     border-radius: 15px;
     padding-left: 15px;
@@ -343,6 +448,60 @@ a:visited[b-p3bnnmd0b4]{
 .item-content:hover[b-p3bnnmd0b4]{
     filter:brightness(1.5);
     background-color: rgba(181, 181, 181, .3);
+}
+/* _content/Assignment1/Shared/Components/Notification/Notification.razor.rz.scp.css */
+.notification[b-pp6yi5hsla]{
+    background-color: #242C37;
+    border-radius: 15px;
+    color:white;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.title[b-pp6yi5hsla]{
+    padding: 10px 20px 0;
+    font-size: 20px;
+    font-weight: bolder;
+    color: gray;
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: stretch;
+	align-content: stretch;
+}
+
+.exit[b-pp6yi5hsla]{
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.exit:hover[b-pp6yi5hsla]{
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.content[b-pp6yi5hsla]{
+    padding: 0 20px 10px;
+    font-size: 16px;
+}
+/* _content/Assignment1/Shared/Components/Notification/NotificationArea.razor.rz.scp.css */
+.notification-area[b-y248zv2g7p]{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: stretch;
+    align-content: stretch;
+    background: transparent;
+    right: 20px;
+    bottom: 20px;
+    width: 30vw;
+    height: 30vh;
 }
 /* _content/Assignment1/Shared/Components/SideBar/SideBar.razor.rz.scp.css */
 *[b-dwvbmy665p]{

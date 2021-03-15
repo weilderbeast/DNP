@@ -82,6 +82,27 @@ using Assignment1.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\Pages\Adults\Adults.razor"
+using Assignment1.Shared.Components.NavMenu;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 4 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\Pages\Adults\Adults.razor"
+using Assignment1.Shared.Components.SideBar;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 2 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\Pages\Adults\Adults.razor"
+           [Authorize]
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/Adults")]
     public partial class Adults : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -90,6 +111,30 @@ using Assignment1.Shared;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 82 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\Pages\Adults\Adults.razor"
+      
+    private string fname;
+    private string lname;
+    private string age;
+    private string hairColor;
+    private string eyeColor;
+    private string weight;
+    private string height;
+    private string sex;
+    private string job;
+    private string salary;
+
+
+    public void Submit()
+    {
+        
+    }
+
+
+#line default
+#line hidden
+#nullable disable
     }
 }
 #pragma warning restore 1591

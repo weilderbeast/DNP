@@ -90,17 +90,17 @@ using Assignment1.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 31 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\Shared\Components\NavMenu\NavMenu.razor"
+#line 37 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\Shared\Components\NavMenu\NavMenu.razor"
       
     private void GoTo()
     {
-        NavigationManager.NavigateTo("/Adults");
+        NavManager.NavigateTo("/Adults");
     }
 
 #line default
 #line hidden
 #nullable disable
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager NavigationManager { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager NavManager { get; set; }
     }
 }
 #pragma warning restore 1591

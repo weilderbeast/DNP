@@ -1,12 +1,100 @@
 @page "/Adults"
+@attribute [Authorize]
+@using Assignment1.Shared.Components.NavMenu;
+@using Assignment1.Shared.Components.SideBar;
 
 <AuthorizeView>
-    <h3>Adults</h3>
+
+    <div class="main">
+        <NavMenu />
+        <SideBar />
+        <div class="adults">
+            <div class="adults-title">
+                Adults
+            </div>
+            <form class="adult-form">
+                <div class="adult-form-fields">
+                    <div class="form-section">
+                        <div class="form-group">
+                            <label class="label" for="fname">First name</label>
+                            <input class="input" type="text" id="fname" name="fname" placeholder="first name..."
+                                @bind-value="@fname">
+                        </div>
+                        <div class="form-group">
+                            <label class="label" for="lname">Last name</label>
+                            <input class="input" type="text" id="lname" name="lname" placeholder="last name..."
+                                @bind-value="@lname">
+                        </div>
+                        <div class="form-group">
+                            <label class="label" for="age">Age</label>
+                            <input class="input" type="text" id="age" name="age" placeholder="age..."
+                                @bind-value="@age">
+                        </div>
+                        <div class="form-group">
+                            <label class="label" for="sex">Sex</label>
+                            <input class="input" type="text" id="sex" name="sex" placeholder="sex..."
+                                @bind-value="@sex">
+                        </div>
+                    </div>
+                    <div class="form-section">
+                        <div class="form-group">
+                            <label class="label" for="hair-color">Hair color</label>
+                            <input class="input" type="text" id="hair-color" name="hair-color" placeholder="hair color..."
+                                @bind-value="@hairColor">
+                        </div>
+                        <div class="form-group">
+                            <label class="label" for="eye-color">Eye color</label>
+                            <input class="input" type="text" id="eye-color" name="eye-color" placeholder="eye color..."
+                                @bind-value="@eyeColor">
+                        </div>
+                        <div class="form-group">
+                            <label class="label" for="height">Height</label>
+                            <input class="input" type="text" id="height" name="height" placeholder="height..."
+                                @bind-value="@height">
+                        </div>
+                        <div class="form-group">
+                            <label class="label" for="weight">Weight</label>
+                            <input class="input" type="text" id="weight" name="weight" placeholder="weight..."
+                                @bind-value="@weight">
+                        </div>
+                    </div>
+                    <div class="form-section">
+                        <div class="form-group">
+                            <label class="label" for="job">Job</label>
+                            <input class="input" type="text" id="job" name="job" placeholder="job..."
+                                @bind-value="@job">
+                        </div>
+                        <div class="form-group">
+                            <label class="label" for="salary">Salary</label>
+                            <input class="input" type="text" id="salary" name="salary" placeholder="salary..."
+                                @bind-value="@salary">
+                        </div>
+                    </div>
+                </div>
+                <button @onclick="Submit" @onclick:preventDefault="true">Submit</button>
+            </form>
+        </div>
+    
+    </div>
+
 </AuthorizeView>
 
 @code{
+    private string fname;
+    private string lname;
+    private string age;
+    private string hairColor;
+    private string eyeColor;
+    private string weight;
+    private string height;
+    private string sex;
+    private string job;
+    private string salary;
 
-    
+
+    public void Submit()
+    {
+        
+    }
 
 }
-

@@ -1,0 +1,14 @@
+.notification-area{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: stretch;
+    align-content: stretch;
+    background: transparent;
+    right: 20px;
+    bottom: 20px;
+    width: 30vw;
+    height: 30vh;
+}

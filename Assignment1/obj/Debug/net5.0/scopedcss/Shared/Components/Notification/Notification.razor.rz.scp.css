@@ -1,0 +1,38 @@
+.notification[b-pp6yi5hsla]{
+    background-color: #242C37;
+    border-radius: 15px;
+    color:white;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.title[b-pp6yi5hsla]{
+    padding: 10px 20px 0;
+    font-size: 20px;
+    font-weight: bolder;
+    color: gray;
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: stretch;
+	align-content: stretch;
+}
+
+.exit[b-pp6yi5hsla]{
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.exit:hover[b-pp6yi5hsla]{
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.content[b-pp6yi5hsla]{
+    padding: 0 20px 10px;
+    font-size: 16px;
+}

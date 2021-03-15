@@ -365,6 +365,126 @@
         }
       },
       {
+        "HashCode": 526776940,
+        "Kind": "Components.Component",
+        "Name": "Assignment1.Shared.Components.Notification.NotificationArea",
+        "AssemblyName": "Assignment1",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "NotificationArea"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Assignment1.Shared.Components.Notification.NotificationArea"
+        }
+      },
+      {
+        "HashCode": -559854411,
+        "Kind": "Components.Component",
+        "Name": "Assignment1.Shared.Components.Notification.NotificationArea",
+        "AssemblyName": "Assignment1",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Assignment1.Shared.Components.Notification.NotificationArea"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Assignment1.Shared.Components.Notification.NotificationArea",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 264407071,
+        "Kind": "Components.Component",
+        "Name": "Assignment1.Shared.Components.Notification.Notification",
+        "AssemblyName": "Assignment1",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Notification"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Title",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Title"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "Content",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Content"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "Severity",
+            "TypeName": "Assignment1.Data.Notifications.NotificationType",
+            "IsEnum": true,
+            "Metadata": {
+              "Common.PropertyName": "Severity"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Assignment1.Shared.Components.Notification.Notification"
+        }
+      },
+      {
+        "HashCode": 4782137,
+        "Kind": "Components.Component",
+        "Name": "Assignment1.Shared.Components.Notification.Notification",
+        "AssemblyName": "Assignment1",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Assignment1.Shared.Components.Notification.Notification"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Title",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Title"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "Content",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Content"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "Severity",
+            "TypeName": "Assignment1.Data.Notifications.NotificationType",
+            "IsEnum": true,
+            "Metadata": {
+              "Common.PropertyName": "Severity"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Assignment1.Shared.Components.Notification.Notification",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
         "HashCode": 781675432,
         "Kind": "Components.Component",
         "Name": "Assignment1.Shared.MainLayout",
@@ -16052,6 +16172,11 @@
   "RootNamespace": "Assignment1",
   "Documents": [
     {
+      "FilePath": "c:\\Users\\cirst\\RiderProjects\\Assignment1\\Assignment1\\Shared\\Components\\Notification\\Notification.razor",
+      "TargetPath": "Shared\\Components\\Notification\\Notification.razor",
+      "FileKind": "component"
+    },
+    {
       "FilePath": "c:\\Users\\cirst\\RiderProjects\\Assignment1\\Assignment1\\Pages\\Common\\Error.cshtml",
       "TargetPath": "Pages\\Common\\Error.cshtml",
       "FileKind": "mvc"
@@ -16089,6 +16214,11 @@
     {
       "FilePath": "c:\\Users\\cirst\\RiderProjects\\Assignment1\\Assignment1\\Shared\\Components\\SideBar\\SideBar.razor",
       "TargetPath": "Shared\\Components\\SideBar\\SideBar.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\cirst\\RiderProjects\\Assignment1\\Assignment1\\Shared\\Components\\Notification\\NotificationArea.razor",
+      "TargetPath": "Shared\\Components\\Notification\\NotificationArea.razor",
       "FileKind": "component"
     },
     {

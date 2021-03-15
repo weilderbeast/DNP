@@ -1,17 +1,19 @@
 ﻿@inherits LayoutComponentBase
 @inject NavigationManager NavigationManager;
+@using Assignment1.Shared.Components.Notification;
 
 <div>
-    @Body
+    @Body  
 </div>
-
+<NotificationArea />
+ 
 
 @code {
     [CascadingParameter] protected Task<AuthenticationState> _task { get; set; }
 
-    protected async override Task OnInitializedAsync()
+    protected override async Task OnInitializedAsync()
     {
-        base.OnInitialized();
+        await base.OnInitializedAsync();
         var user = (await _task).User;
         if (!user.Identity.IsAuthenticated)
         {

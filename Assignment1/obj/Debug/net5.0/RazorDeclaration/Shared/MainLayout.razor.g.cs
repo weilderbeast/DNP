@@ -82,6 +82,13 @@ using Assignment1.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\Shared\MainLayout.razor"
+using Assignment1.Shared.Components.Notification;
+
+#line default
+#line hidden
+#nullable disable
     public partial class MainLayout : LayoutComponentBase
     {
         #pragma warning disable 1998
@@ -90,13 +97,13 @@ using Assignment1.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 9 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\Shared\MainLayout.razor"
+#line 11 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\Shared\MainLayout.razor"
        
     [CascadingParameter] protected Task<AuthenticationState> _task { get; set; }
 
-    protected async override Task OnInitializedAsync()
+    protected override async Task OnInitializedAsync()
     {
-        base.OnInitialized();
+        await base.OnInitializedAsync();
         var user = (await _task).User;
         if (!user.Identity.IsAuthenticated)
         {

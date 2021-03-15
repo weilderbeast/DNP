@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Assignment1.Data;
 using Assignment1.Data.Login;
+using Assignment1.Data.Notifications;
 using Microsoft.AspNetCore.Components.Authorization;
 
 namespace Assignment1
@@ -32,8 +33,8 @@ namespace Assignment1
             services.AddServerSideBlazor();
             services.AddScoped<IUserService, InMemoryUserService>();
             services.AddScoped<AuthenticationStateProvider, CustomAuthProvider>();
+            services.AddSingleton<INotificationManager, NotificationManager>();
 
-            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

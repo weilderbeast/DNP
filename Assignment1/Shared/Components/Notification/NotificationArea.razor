@@ -1,0 +1,35 @@
+@using Assignment1.Data.Notifications
+<div class="notification-area">
+    @foreach (var notification in _notifications)
+    {
+        <Notification Content="@notification.Content" Title="@notification.Title"/>
+    }
+</div>
+
+@code{
+    List<Notification> _notifications;
+    private NotificationManager _notificationManager = new NotificationManager();
+
+    public NotificationArea()
+    {
+        _notifications = _notificationManager.GetNotifications();
+        _notificationManager.Subscribe(this);
+        _notifications.Add(new Notification() 
+        {
+            Content = "Some text here that represents the body of the notification",
+            Title = "The title of the notification",
+            Severity = NotificationType.Error,
+            NotificationManager = _notificationManager
+        }
+            );
+        Console.WriteLine(_notifications[0].Title);
+    }
+
+    public void ReactToNotification()
+    {
+        _notifications.Add(_notificationManager.GetLastNotification());
+    }
+
+
+
+}
