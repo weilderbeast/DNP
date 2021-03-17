@@ -1,4 +1,5 @@
 @using Assignment1.Data.Notifications
+@inject NotificationManager NotificationManager
 <div class="notification">
     <div class="title" style="color:@_color">
         @Title
@@ -18,8 +19,6 @@
     public string Content { get; set; }
     [Parameter]
     public NotificationType Severity { get; set; }
-    [Parameter]
-    public NotificationManager NotificationManager { get; set; }
 
     private string _color = "lightblue";
 
@@ -45,7 +44,7 @@
     }
 
     private void Remove(){
-        NotificationManager.Remove(Title);
+        NotificationManager.Remove(this);
     }
 
 }

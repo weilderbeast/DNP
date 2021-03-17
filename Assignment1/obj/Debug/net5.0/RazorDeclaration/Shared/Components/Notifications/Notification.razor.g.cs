@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace Assignment1.Shared.Components.Notification
+namespace Assignment1.Shared.Components.Notifications
 {
     #line hidden
     using System;
@@ -83,7 +83,7 @@ using Assignment1.Shared;
 #line hidden
 #nullable disable
 #nullable restore
-#line 1 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\Shared\Components\Notification\Notification.razor"
+#line 1 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\Shared\Components\Notifications\Notification.razor"
 using Assignment1.Data.Notifications;
 
 #line default
@@ -97,7 +97,7 @@ using Assignment1.Data.Notifications;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 14 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\Shared\Components\Notification\Notification.razor"
+#line 15 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\Shared\Components\Notifications\Notification.razor"
       
     [Parameter]
     public string Title { get; set; }
@@ -105,8 +105,6 @@ using Assignment1.Data.Notifications;
     public string Content { get; set; }
     [Parameter]
     public NotificationType Severity { get; set; }
-    [Parameter]
-    public NotificationManager NotificationManager { get; set; }
 
     private string _color = "lightblue";
 
@@ -132,13 +130,14 @@ using Assignment1.Data.Notifications;
     }
 
     private void Remove(){
-        NotificationManager.Remove(Title);
+        NotificationManager.Remove(this);
     }
 
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NotificationManager NotificationManager { get; set; }
     }
 }
 #pragma warning restore 1591

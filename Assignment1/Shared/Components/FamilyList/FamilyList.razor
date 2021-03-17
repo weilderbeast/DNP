@@ -7,14 +7,14 @@
         <div class="family-title">
             Families
             <a href="/adults">
-                <img src="/icons/plus.svg">
+                <img alt="asd" src="/icons/plus.svg">
             </a>
         </div>
-        <input class="input-field" type="text" placeholder="Search..." @oninput="@((arg) => Filter(arg))">
+        <input class="input-field" type="text" placeholder="Search..." @oninput="@(Filter)">
     </div>
 
     <div class="family-container">
-        @foreach (var family in filteredFamilies)
+        @foreach (var family in _filteredFamilies)
         {
             <FamilyListing Family=@family/>
         }
@@ -22,13 +22,13 @@
 </div>
 
 @code{
-    private IList<Family> families = new List<Family>();
-    private IList<Family> filteredFamilies = new List<Family>();
-    private FileContext files = new FileContext();
+    private IList<Family> _families = new List<Family>();
+    private IList<Family> _filteredFamilies = new List<Family>();
+    private FileContext _files = new FileContext();
 
-    protected override async Task OnInitializedAsync()
+    protected override void OnInitialized()
     {
-        families = files.Families;
+        _families = _files.Families;
         Filter(new ChangeEventArgs());
     }
 
@@ -45,11 +45,11 @@
         }
         if (filterByName != null && !filterByName.Equals(""))
         {
-            filteredFamilies = families.Where(t => t.Adults[0].LastName.Contains(filterByName)).ToList();
+            _filteredFamilies = _families.Where(t => t.Adults[0].LastName.Contains(filterByName)).ToList();
         }
         else
         {
-            filteredFamilies = families;
+            _filteredFamilies = _families;
         }
     }
 

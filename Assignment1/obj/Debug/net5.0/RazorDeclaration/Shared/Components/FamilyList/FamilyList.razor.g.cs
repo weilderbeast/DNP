@@ -113,13 +113,13 @@ using Assignment1.Data.Persistence;
 #nullable restore
 #line 24 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\Shared\Components\FamilyList\FamilyList.razor"
       
-    private IList<Family> families = new List<Family>();
-    private IList<Family> filteredFamilies = new List<Family>();
-    private FileContext files = new FileContext();
+    private IList<Family> _families = new List<Family>();
+    private IList<Family> _filteredFamilies = new List<Family>();
+    private FileContext _files = new FileContext();
 
-    protected override async Task OnInitializedAsync()
+    protected override void OnInitialized()
     {
-        families = files.Families;
+        _families = _files.Families;
         Filter(new ChangeEventArgs());
     }
 
@@ -136,11 +136,11 @@ using Assignment1.Data.Persistence;
         }
         if (filterByName != null && !filterByName.Equals(""))
         {
-            filteredFamilies = families.Where(t => t.Adults[0].LastName.Contains(filterByName)).ToList();
+            _filteredFamilies = _families.Where(t => t.Adults[0].LastName.Contains(filterByName)).ToList();
         }
         else
         {
-            filteredFamilies = families;
+            _filteredFamilies = _families;
         }
     }
 

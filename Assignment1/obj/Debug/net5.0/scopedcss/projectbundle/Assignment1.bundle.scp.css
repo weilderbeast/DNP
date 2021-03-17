@@ -449,15 +449,15 @@ a:visited[b-p3bnnmd0b4]{
     filter:brightness(1.5);
     background-color: rgba(181, 181, 181, .3);
 }
-/* _content/Assignment1/Shared/Components/Notification/Notification.razor.rz.scp.css */
-.notification[b-pp6yi5hsla]{
+/* _content/Assignment1/Shared/Components/Notifications/Notification.razor.rz.scp.css */
+.notification[b-6igrmcc52c]{
     background-color: #242C37;
     border-radius: 15px;
     color:white;
     width: 100%;
     margin-bottom: 10px;
 }
-.title[b-pp6yi5hsla]{
+.title[b-6igrmcc52c]{
     padding: 10px 20px 0;
     font-size: 20px;
     font-weight: bolder;
@@ -470,7 +470,7 @@ a:visited[b-p3bnnmd0b4]{
 	align-content: stretch;
 }
 
-.exit[b-pp6yi5hsla]{
+.exit[b-6igrmcc52c]{
     border-radius: 50%;
     height: 25px;
     width: 25px;
@@ -480,16 +480,16 @@ a:visited[b-p3bnnmd0b4]{
     cursor: pointer;
 }
 
-.exit:hover[b-pp6yi5hsla]{
+.exit:hover[b-6igrmcc52c]{
     background-color: rgba(255, 255, 255, 0.3);
 }
 
-.content[b-pp6yi5hsla]{
+.content[b-6igrmcc52c]{
     padding: 0 20px 10px;
     font-size: 16px;
 }
-/* _content/Assignment1/Shared/Components/Notification/NotificationArea.razor.rz.scp.css */
-.notification-area[b-y248zv2g7p]{
+/* _content/Assignment1/Shared/Components/Notifications/NotificationArea.razor.rz.scp.css */
+.notification-area[b-9cp1910sm5]{
     position: fixed;
     display: flex;
     flex-direction: column;

@@ -365,40 +365,7 @@
         }
       },
       {
-        "HashCode": 526776940,
-        "Kind": "Components.Component",
-        "Name": "Assignment1.Shared.Components.Notification.NotificationArea",
-        "AssemblyName": "Assignment1",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "NotificationArea"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Assignment1.Shared.Components.Notification.NotificationArea"
-        }
-      },
-      {
-        "HashCode": -559854411,
-        "Kind": "Components.Component",
-        "Name": "Assignment1.Shared.Components.Notification.NotificationArea",
-        "AssemblyName": "Assignment1",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Assignment1.Shared.Components.Notification.NotificationArea"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Assignment1.Shared.Components.Notification.NotificationArea",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": 264407071,
+        "HashCode": 537744470,
         "Kind": "Components.Component",
         "Name": "Assignment1.Shared.Components.Notification.Notification",
         "AssemblyName": "Assignment1",
@@ -433,6 +400,14 @@
             "Metadata": {
               "Common.PropertyName": "Severity"
             }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "NotificationManager",
+            "TypeName": "Assignment1.Data.Notifications.NotificationManager",
+            "Metadata": {
+              "Common.PropertyName": "NotificationManager"
+            }
           }
         ],
         "Metadata": {
@@ -441,7 +416,7 @@
         }
       },
       {
-        "HashCode": 4782137,
+        "HashCode": 520636145,
         "Kind": "Components.Component",
         "Name": "Assignment1.Shared.Components.Notification.Notification",
         "AssemblyName": "Assignment1",
@@ -476,11 +451,52 @@
             "Metadata": {
               "Common.PropertyName": "Severity"
             }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "NotificationManager",
+            "TypeName": "Assignment1.Data.Notifications.NotificationManager",
+            "Metadata": {
+              "Common.PropertyName": "NotificationManager"
+            }
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "Assignment1.Shared.Components.Notification.Notification",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 526776940,
+        "Kind": "Components.Component",
+        "Name": "Assignment1.Shared.Components.Notification.NotificationArea",
+        "AssemblyName": "Assignment1",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "NotificationArea"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Assignment1.Shared.Components.Notification.NotificationArea"
+        }
+      },
+      {
+        "HashCode": -559854411,
+        "Kind": "Components.Component",
+        "Name": "Assignment1.Shared.Components.Notification.NotificationArea",
+        "AssemblyName": "Assignment1",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Assignment1.Shared.Components.Notification.NotificationArea"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Assignment1.Shared.Components.Notification.NotificationArea",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },

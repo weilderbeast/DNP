@@ -1,4 +1,6 @@
 @using Assignment1.Data.Notifications
+@inject NotificationManager NotificationManager
+
 <div class="notification-area">
     @foreach (var notification in _notifications)
     {
@@ -7,29 +9,27 @@
 </div>
 
 @code{
-    List<Notification> _notifications;
-    private NotificationManager _notificationManager = new NotificationManager();
+    List<Notification> _notifications = new List<Notification>();
 
-    public NotificationArea()
+    protected override void OnInitialized()
     {
-        _notifications = _notificationManager.GetNotifications();
-        _notificationManager.Subscribe(this);
-        _notifications.Add(new Notification() 
+        _notifications = NotificationManager.GetNotifications();
+        NotificationManager.Subscribe(this);
+        NotificationManager.AddNotification(new Notification()
         {
             Content = "Some text here that represents the body of the notification",
             Title = "The title of the notification",
             Severity = NotificationType.Error,
-            NotificationManager = _notificationManager
         }
             );
-        Console.WriteLine(_notifications[0].Title);
+        Console.WriteLine(_notifications.ToString());
     }
 
     public void ReactToNotification()
     {
-        _notifications.Add(_notificationManager.GetLastNotification());
+        _notifications = NotificationManager.GetNotifications();
+        Console.WriteLine("this happened too");
     }
-
-
-
+    
+    
 }

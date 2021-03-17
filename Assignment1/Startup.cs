@@ -33,7 +33,7 @@ namespace Assignment1
             services.AddServerSideBlazor();
             services.AddScoped<IUserService, InMemoryUserService>();
             services.AddScoped<AuthenticationStateProvider, CustomAuthProvider>();
-            services.AddSingleton<INotificationManager, NotificationManager>();
+            services.AddSingleton<NotificationManager>();
 
         }
 

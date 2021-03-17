@@ -84,7 +84,7 @@ using Assignment1.Shared;
 #nullable disable
 #nullable restore
 #line 3 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\Shared\MainLayout.razor"
-using Assignment1.Shared.Components.Notification;
+using Assignment1.Shared.Components.Notifications;
 
 #line default
 #line hidden

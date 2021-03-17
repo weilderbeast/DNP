@@ -1,11 +1,11 @@
 using System;
 using System.Collections.Generic;
-using System.Threading.Tasks;
-using Assignment1.Shared.Components.Notification;
+using Assignment1.Shared.Components.Notifications;
 
 namespace Assignment1.Data.Notifications{
     public class NotificationManager : INotificationManager
     {
+        //TODO do a singleton
         private List<Notification> _notifications;
         private List<NotificationArea> _subscribers;
         
@@ -18,10 +18,7 @@ namespace Assignment1.Data.Notifications{
         public void AddNotification(Notification notification)
         {
             _notifications.Add(notification);
-            foreach (var subscriber in _subscribers)
-            {
-                subscriber?.ReactToNotification();
-            }
+            Notify();
         }
         
         public List<Notification> GetNotifications()
@@ -39,9 +36,19 @@ namespace Assignment1.Data.Notifications{
             return _notifications[_notifications.Count];
         }
 
-        public void Remove(string title)
+        public void Remove(Notification notification)
         {
-            _notifications.Find(notification => notification.Title.Equals(title));
+            _notifications.Remove(notification);
+            Notify();
+        }
+
+        private void Notify()
+        {
+            foreach (var subscriber in _subscribers)
+            {
+                Console.WriteLine("Notified "+subscriber);
+                subscriber.ReactToNotification();
+            }
         }
     }
 }

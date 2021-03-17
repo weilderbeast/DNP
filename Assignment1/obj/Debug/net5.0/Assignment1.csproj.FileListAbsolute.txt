@@ -73,9 +73,9 @@ C:\Users\cirst\RiderProjects\Assignment1\Assignment1\obj\Debug\net5.0\scopedcss\
 C:\Users\cirst\RiderProjects\Assignment1\Assignment1\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.Google.dll
 C:\Users\cirst\RiderProjects\Assignment1\Assignment1\obj\Debug\net5.0\Razor\Pages\Common\_Host.cshtml.g.cs
 C:\Users\cirst\RiderProjects\Assignment1\Assignment1\obj\Debug\net5.0\scopedcss\Pages\Adults\Adults.razor.rz.scp.css
-C:\Users\cirst\RiderProjects\Assignment1\Assignment1\obj\Debug\net5.0\RazorDeclaration\Shared\Components\Notification\Notification.razor.g.cs
-C:\Users\cirst\RiderProjects\Assignment1\Assignment1\obj\Debug\net5.0\RazorDeclaration\Shared\Components\Notification\NotificationArea.razor.g.cs
-C:\Users\cirst\RiderProjects\Assignment1\Assignment1\obj\Debug\net5.0\Razor\Shared\Components\Notification\Notification.razor.g.cs
-C:\Users\cirst\RiderProjects\Assignment1\Assignment1\obj\Debug\net5.0\Razor\Shared\Components\Notification\NotificationArea.razor.g.cs
-C:\Users\cirst\RiderProjects\Assignment1\Assignment1\obj\Debug\net5.0\scopedcss\Shared\Components\Notification\Notification.razor.rz.scp.css
-C:\Users\cirst\RiderProjects\Assignment1\Assignment1\obj\Debug\net5.0\scopedcss\Shared\Components\Notification\NotificationArea.razor.rz.scp.css
+C:\Users\cirst\RiderProjects\Assignment1\Assignment1\obj\Debug\net5.0\RazorDeclaration\Shared\Components\Notifications\Notification.razor.g.cs
+C:\Users\cirst\RiderProjects\Assignment1\Assignment1\obj\Debug\net5.0\RazorDeclaration\Shared\Components\Notifications\NotificationArea.razor.g.cs
+C:\Users\cirst\RiderProjects\Assignment1\Assignment1\obj\Debug\net5.0\Razor\Shared\Components\Notifications\Notification.razor.g.cs
+C:\Users\cirst\RiderProjects\Assignment1\Assignment1\obj\Debug\net5.0\Razor\Shared\Components\Notifications\NotificationArea.razor.g.cs
+C:\Users\cirst\RiderProjects\Assignment1\Assignment1\obj\Debug\net5.0\scopedcss\Shared\Components\Notifications\Notification.razor.rz.scp.css
+C:\Users\cirst\RiderProjects\Assignment1\Assignment1\obj\Debug\net5.0\scopedcss\Shared\Components\Notifications\NotificationArea.razor.rz.scp.css
