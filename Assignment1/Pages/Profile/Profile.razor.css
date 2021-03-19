@@ -1,0 +1,42 @@
+.profile-main{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile{
+    width: 70vw;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-image{
+    width: 50%;
+    height: 100%;
+}
+
+.profile-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.profile-info{
+    width: 50%;
+    height: 100%;
+    color: white;
+}
+
+.profile-name{
+    font-size: 60px;
+}
+
+.logout-button{
+    color: lightskyblue;
+    font-size: 30px;
+    cursor: pointer;
+}

@@ -1,19 +1,26 @@
-<div class="sidebar">
-    <ul class="sidebar-nav">
-        <li class="sidebar-item">
-            <a href="https://www.facebook.com/cirstoiu.bogdan">
-                <img src="/icons/facebook.svg" width="20" height="20">
-            </a>
-        </li>
-        <li class="sidebar-item">
-            <a href="https://www.instagram.com/_bogdanel/">
-                <img src="/icons/instagram.svg" width="20" height="20">
-            </a>
-        </li>
-        <li class="sidebar-item">
-            <a href="mailto:297109@via.dk">
-                <img src="/icons/mail.svg" width="20" height="20">
-            </a>
-        </li>
-    </ul>
-</div>
+<AuthorizeView>
+    <Authorized>
+        <div class="sidebar">
+            <ul class="sidebar-nav">
+                <li class="sidebar-item">
+                    <a href="https://www.facebook.com/cirstoiu.bogdan">
+                        <img src="/icons/facebook.svg" width="20" height="20">
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="https://www.instagram.com/_bogdanel/">
+                        <img src="/icons/instagram.svg" width="20" height="20">
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="mailto:297109@via.dk">
+                        <img src="/icons/mail.svg" width="20" height="20">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </Authorized>
+    <NotAuthorized>
+        <div></div>
+    </NotAuthorized>
+</AuthorizeView>

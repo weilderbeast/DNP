@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace Assignment1.Shared.Components.Notifications
+namespace Assignment1.Pages.Profile
 {
     #line hidden
     using System;
@@ -83,13 +83,70 @@ using Assignment1.Shared;
 #line hidden
 #nullable disable
 #nullable restore
-#line 1 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\Shared\Components\Notifications\Notification.razor"
-using Assignment1.Data.Notifications;
+#line 11 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\_Imports.razor"
+using Assignment1.Shared.Components.NavMenu;
 
 #line default
 #line hidden
 #nullable disable
-    public partial class Notification : Microsoft.AspNetCore.Components.ComponentBase
+#nullable restore
+#line 12 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\_Imports.razor"
+using Assignment1.Shared.Components.SideBar;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 13 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\_Imports.razor"
+using Assignment1.Data.Persistence;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 14 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\_Imports.razor"
+using Assignment1.Data.Models;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 15 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\_Imports.razor"
+using Assignment1.Data.NotificationService;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 16 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\_Imports.razor"
+using Assignment1.Data.NotificationService.NotificationModel;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 17 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\_Imports.razor"
+using Assignment1.Shared.Components.NotificationsNew;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 5 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\Pages\Profile\Profile.razor"
+using Assignment1.Data.Login;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 2 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\Pages\Profile\Profile.razor"
+           [Authorize]
+
+#line default
+#line hidden
+#nullable disable
+    [Microsoft.AspNetCore.Components.RouteAttribute("/profile")]
+    public partial class Profile : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -97,47 +154,27 @@ using Assignment1.Data.Notifications;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 15 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\Shared\Components\Notifications\Notification.razor"
+#line 26 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\Pages\Profile\Profile.razor"
       
-    [Parameter]
-    public string Title { get; set; }
-    [Parameter]
-    public string Content { get; set; }
-    [Parameter]
-    public NotificationType Severity { get; set; }
+    private string username;
 
-    private string _color = "lightblue";
-
-    public Notification()
+    protected override void OnInitialized()
     {
-        switch (Severity)
-        {
-            case NotificationType.Error:
-                _color = "";
-                _color = "#FD4D4D";
-                break;
-            case NotificationType.Info:
-                _color = "";
-                _color = "#add8e6";
-                break;
-            case NotificationType.Success:
-                _color = "";
-                _color = "#32CD32";
-                break;
-            default:
-                throw new ArgumentOutOfRangeException();
-        }
+        base.OnInitialized();
+        username = ((CustomAuthProvider)AuthenticationStateProvider).GetCachedUser().Username;
     }
 
-    private void Remove(){
-        NotificationManager.Remove(this);
-    }
+    public void Logout(){
+        ((CustomAuthProvider)AuthenticationStateProvider).Logout();
+        NavigationManager.NavigateTo("/login");
 
+    }
 
 #line default
 #line hidden
 #nullable disable
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NotificationManager NotificationManager { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager NavigationManager { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private AuthenticationStateProvider AuthenticationStateProvider { get; set; }
     }
 }
 #pragma warning restore 1591

@@ -1,4 +1,4 @@
-.main[b-wohj4zlpcx]{
+.adults-main[b-wohj4zlpcx]{
     background-color: #0B0E11;
     max-width: 100vw;
     height: 100vh;
@@ -103,4 +103,26 @@ button:hover[b-wohj4zlpcx]{
 
 [b-wohj4zlpcx]::placeholder{
     color: white;
+}
+
+input[b-wohj4zlpcx]::-webkit-outer-spin-button,
+input[b-wohj4zlpcx]::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    color: white;
+}
+
+input[type=number][b-wohj4zlpcx]{
+    -moz-appearance: textfield;
+    color: white;
+}
+
+select option[b-wohj4zlpcx]{
+    background: rgba(43, 43, 43);
+    border: none;
+    border-radius: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
 }

@@ -83,6 +83,41 @@ using Assignment1.Shared;
 #line hidden
 #nullable disable
 #nullable restore
+#line 11 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\_Imports.razor"
+using Assignment1.Shared.Components.NavMenu;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 12 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\_Imports.razor"
+using Assignment1.Shared.Components.SideBar;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 15 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\_Imports.razor"
+using Assignment1.Data.NotificationService;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 16 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\_Imports.razor"
+using Assignment1.Data.NotificationService.NotificationModel;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 17 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\_Imports.razor"
+using Assignment1.Shared.Components.NotificationsNew;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 1 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\Shared\Components\FamilyList\FamilyList.razor"
 using Assignment1.Data.Models;
 
@@ -97,7 +132,7 @@ using Assignment1.Data.Persistence;
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\Shared\Components\FamilyList\FamilyList.razor"
+#line 6 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\Shared\Components\FamilyList\FamilyList.razor"
            [Authorize]
 
 #line default
@@ -111,15 +146,14 @@ using Assignment1.Data.Persistence;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 24 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\Shared\Components\FamilyList\FamilyList.razor"
+#line 27 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\Shared\Components\FamilyList\FamilyList.razor"
       
     private IList<Family> _families = new List<Family>();
     private IList<Family> _filteredFamilies = new List<Family>();
-    private FileContext _files = new FileContext();
 
     protected override void OnInitialized()
     {
-        _families = _files.Families;
+        _families = FileContext.Families;
         Filter(new ChangeEventArgs());
     }
 
@@ -148,6 +182,7 @@ using Assignment1.Data.Persistence;
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private FileContext FileContext { get; set; }
     }
 }
 #pragma warning restore 1591

@@ -56,7 +56,9 @@
         try {
             ((CustomAuthProvider) AuthenticationStateProvider).Logout();
             NavigationManager.NavigateTo("/");
-        } catch (Exception e) { }
+        } catch (Exception e) { 
+            System.Console.WriteLine(e);
+        }
     }
 
 }

@@ -1,0 +1,42 @@
+.profile-main[b-k6e8t7ysiy]{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile[b-k6e8t7ysiy]{
+    width: 70vw;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-image[b-k6e8t7ysiy]{
+    width: 50%;
+    height: 100%;
+}
+
+.profile-image img[b-k6e8t7ysiy]{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.profile-info[b-k6e8t7ysiy]{
+    width: 50%;
+    height: 100%;
+    color: white;
+}
+
+.profile-name[b-k6e8t7ysiy]{
+    font-size: 60px;
+}
+
+.logout-button[b-k6e8t7ysiy]{
+    color: lightskyblue;
+    font-size: 30px;
+    cursor: pointer;
+}

@@ -1,83 +1,90 @@
 @page "/Adults"
+
+@inject FileContext FileContext;
+
+
 @attribute [Authorize]
-@using Assignment1.Shared.Components.NavMenu;
-@using Assignment1.Shared.Components.SideBar;
 
-<AuthorizeView>
-
-    <div class="main">
-        <NavMenu />
-        <SideBar />
-        <div class="adults">
-            <div class="adults-title">
-                Adults
-            </div>
-            <form class="adult-form">
-                <div class="adult-form-fields">
-                    <div class="form-section">
-                        <div class="form-group">
-                            <label class="label" for="fname">First name</label>
-                            <input class="input" type="text" id="fname" name="fname" placeholder="first name..."
-                                @bind-value="@fname">
-                        </div>
-                        <div class="form-group">
-                            <label class="label" for="lname">Last name</label>
-                            <input class="input" type="text" id="lname" name="lname" placeholder="last name..."
-                                @bind-value="@lname">
-                        </div>
-                        <div class="form-group">
-                            <label class="label" for="age">Age</label>
-                            <input class="input" type="text" id="age" name="age" placeholder="age..."
-                                @bind-value="@age">
-                        </div>
-                        <div class="form-group">
-                            <label class="label" for="sex">Sex</label>
-                            <input class="input" type="text" id="sex" name="sex" placeholder="sex..."
-                                @bind-value="@sex">
-                        </div>
+<div class="adults-main">
+    <div class="adults">
+        <div class="adults-title">
+            Adults
+        </div>
+        <form class="adult-form">
+            <div class="adult-form-fields">
+                <div class="form-section">
+                    <div class="form-group">
+                        <label class="label" for="fname">First name</label>
+                        <input class="input" type="text" id="fname" name="fname" placeholder="first name..."
+                            @bind-value="@fname">
                     </div>
-                    <div class="form-section">
-                        <div class="form-group">
-                            <label class="label" for="hair-color">Hair color</label>
-                            <input class="input" type="text" id="hair-color" name="hair-color" placeholder="hair color..."
-                                @bind-value="@hairColor">
-                        </div>
-                        <div class="form-group">
-                            <label class="label" for="eye-color">Eye color</label>
-                            <input class="input" type="text" id="eye-color" name="eye-color" placeholder="eye color..."
-                                @bind-value="@eyeColor">
-                        </div>
-                        <div class="form-group">
-                            <label class="label" for="height">Height</label>
-                            <input class="input" type="text" id="height" name="height" placeholder="height..."
-                                @bind-value="@height">
-                        </div>
-                        <div class="form-group">
-                            <label class="label" for="weight">Weight</label>
-                            <input class="input" type="text" id="weight" name="weight" placeholder="weight..."
-                                @bind-value="@weight">
-                        </div>
+                    <div class="form-group">
+                        <label class="label" for="lname">Last name</label>
+                        <input class="input" type="text" id="lname" name="lname" placeholder="last name..."
+                            @bind-value="@lname">
                     </div>
-                    <div class="form-section">
-                        <div class="form-group">
-                            <label class="label" for="job">Job</label>
-                            <input class="input" type="text" id="job" name="job" placeholder="job..."
-                                @bind-value="@job">
-                        </div>
-                        <div class="form-group">
-                            <label class="label" for="salary">Salary</label>
-                            <input class="input" type="text" id="salary" name="salary" placeholder="salary..."
-                                @bind-value="@salary">
-                        </div>
+                    <div class="form-group">
+                        <label class="label" for="age">Age</label>
+                        <input class="input" type="number" id="age" name="age" placeholder="age..." @bind-value="@age">
+                    </div>
+                    <div class="form-group">
+                        <label class="label" for="sex">Sex</label>
+                        <!-- Unfortunately, the option tags cannot be edited via css, as they are handled by 
+                        the os of the browser they're running on -->
+                        <select class="input" style="width: 212px; height: 34px;">
+                            <option value="">
+                                Select sex
+                            </option>
+                            <option value="M">
+                                M
+                            </option>
+                            <option value="F">
+                                F
+                            </option>
+                        </select>
+                        @* <input class="input" type="text" id="sex" name="sex" placeholder="sex..." @bind-value="@sex"> *@
                     </div>
                 </div>
-                <button @onclick="Submit" @onclick:preventDefault="true">Submit</button>
-            </form>
-        </div>
-    
+                <div class="form-section">
+                    <div class="form-group">
+                        <label class="label" for="hair-color">Hair color</label>
+                        <input class="input" type="text" id="hair-color" name="hair-color" placeholder="hair color..."
+                            @bind-value="@hairColor">
+                    </div>
+                    <div class="form-group">
+                        <label class="label" for="eye-color">Eye color</label>
+                        <input class="input" type="text" id="eye-color" name="eye-color" placeholder="eye color..."
+                            @bind-value="@eyeColor">
+                    </div>
+                    <div class="form-group">
+                        <label class="label" for="height">Height</label>
+                        <input class="input" type="text" id="height" name="height" placeholder="height..."
+                            @bind-value="@height">
+                    </div>
+                    <div class="form-group">
+                        <label class="label" for="weight">Weight</label>
+                        <input class="input" type="text" id="weight" name="weight" placeholder="weight..."
+                            @bind-value="@weight">
+                    </div>
+                </div>
+                <div class="form-section">
+                    <div class="form-group">
+                        <label class="label" for="job">Job</label>
+                        <input class="input" type="text" id="job" name="job" placeholder="job..." @bind-value="@job">
+                    </div>
+                    <div class="form-group">
+                        <label class="label" for="salary">Salary</label>
+                        <input class="input" type="text" id="salary" name="salary" placeholder="salary..."
+                            @bind-value="@salary">
+                    </div>
+                </div>
+            </div>
+            <button @onclick="Submit" @onclick:preventDefault="true">Submit</button>
+        </form>
     </div>
+</div>
 
-</AuthorizeView>
+
 
 @code{
     private string fname;
@@ -91,10 +98,44 @@
     private string job;
     private string salary;
 
-
     public void Submit()
     {
-        
+        var Adult = new Adult();
+        Adult.FirstName = fname;
+        Adult.LastName = lname;
+        Adult.HairColor = hairColor;
+        Adult.EyeColor = eyeColor;
+        Adult.Age = Int32.Parse(age);
+        Adult.Weight = float.Parse(weight);
+        Adult.Height = Int32.Parse(height);
+        Adult.Sex = sex;
+        var Job = new Job();
+        Job.JobTitle = job;
+        Job.Salary = Int32.Parse(salary);
+        Adult.JobTitle = Job;
+
+        System.Console.WriteLine(Adult.ToString());
+
+        var id = FileContext.Adults.Last<Adult>().Id;
+
+        Adult.Id = id + 1;
+        FileContext.Adults.Add(Adult);
+
+        Clear();
+    }
+
+    private void Clear()
+    {
+        fname = "";
+        lname = "";
+        age = "";
+        sex = "";
+        hairColor = "";
+        eyeColor = "";
+        height = "";
+        weight = "";
+        job = "";
+        salary = "";
     }
 
 }

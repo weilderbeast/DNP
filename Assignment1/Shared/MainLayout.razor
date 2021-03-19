@@ -1,12 +1,12 @@
 ﻿@inherits LayoutComponentBase
 @inject NavigationManager NavigationManager;
-@using Assignment1.Shared.Components.Notifications;
 
-<div>
-    @Body  
+<div class="main">
+    <Notification />
+    <NavMenu/>
+    <SideBar/>
+    @Body
 </div>
-<NotificationArea />
- 
 
 @code {
     [CascadingParameter] protected Task<AuthenticationState> _task { get; set; }

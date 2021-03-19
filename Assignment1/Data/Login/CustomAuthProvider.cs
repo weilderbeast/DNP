@@ -21,6 +21,10 @@ namespace Assignment1.Data.Login
             _userService = userService;
         }
 
+        public User GetCachedUser(){
+            return _cachedUser;
+        }
+
         public override async Task<AuthenticationState> GetAuthenticationStateAsync()
         {
             var identity = new ClaimsIdentity();

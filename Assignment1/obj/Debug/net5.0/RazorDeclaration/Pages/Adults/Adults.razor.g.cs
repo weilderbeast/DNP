@@ -83,21 +83,56 @@ using Assignment1.Shared;
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\Pages\Adults\Adults.razor"
+#line 11 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\_Imports.razor"
 using Assignment1.Shared.Components.NavMenu;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\Pages\Adults\Adults.razor"
+#line 12 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\_Imports.razor"
 using Assignment1.Shared.Components.SideBar;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\Pages\Adults\Adults.razor"
+#line 13 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\_Imports.razor"
+using Assignment1.Data.Persistence;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 14 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\_Imports.razor"
+using Assignment1.Data.Models;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 15 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\_Imports.razor"
+using Assignment1.Data.NotificationService;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 16 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\_Imports.razor"
+using Assignment1.Data.NotificationService.NotificationModel;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 17 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\_Imports.razor"
+using Assignment1.Shared.Components.NotificationsNew;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 6 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\Pages\Adults\Adults.razor"
            [Authorize]
 
 #line default
@@ -112,7 +147,7 @@ using Assignment1.Shared.Components.SideBar;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 82 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\Pages\Adults\Adults.razor"
+#line 89 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\Pages\Adults\Adults.razor"
       
     private string fname;
     private string lname;
@@ -125,16 +160,51 @@ using Assignment1.Shared.Components.SideBar;
     private string job;
     private string salary;
 
-
     public void Submit()
     {
-        
+        var Adult = new Adult();
+        Adult.FirstName = fname;
+        Adult.LastName = lname;
+        Adult.HairColor = hairColor;
+        Adult.EyeColor = eyeColor;
+        Adult.Age = Int32.Parse(age);
+        Adult.Weight = float.Parse(weight);
+        Adult.Height = Int32.Parse(height);
+        Adult.Sex = sex;
+        var Job = new Job();
+        Job.JobTitle = job;
+        Job.Salary = Int32.Parse(salary);
+        Adult.JobTitle = Job;
+
+        System.Console.WriteLine(Adult.ToString());
+
+        var id = FileContext.Adults.Last<Adult>().Id;
+
+        Adult.Id = id + 1;
+        FileContext.Adults.Add(Adult);
+
+        Clear();
+    }
+
+    private void Clear()
+    {
+        fname = "";
+        lname = "";
+        age = "";
+        sex = "";
+        hairColor = "";
+        eyeColor = "";
+        height = "";
+        weight = "";
+        job = "";
+        salary = "";
     }
 
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private FileContext FileContext { get; set; }
     }
 }
 #pragma warning restore 1591

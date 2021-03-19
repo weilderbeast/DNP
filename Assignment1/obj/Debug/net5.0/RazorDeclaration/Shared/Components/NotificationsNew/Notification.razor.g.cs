@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace Assignment1.Shared.Components.Notifications
+namespace Assignment1.Shared.Components.NotificationsNew
 {
     #line hidden
     using System;
@@ -83,50 +83,61 @@ using Assignment1.Shared;
 #line hidden
 #nullable disable
 #nullable restore
-#line 1 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\Shared\Components\Notifications\NotificationArea.razor"
-using Assignment1.Data.Notifications;
+#line 11 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\_Imports.razor"
+using Assignment1.Shared.Components.NavMenu;
 
 #line default
 #line hidden
 #nullable disable
-    public partial class NotificationArea : Microsoft.AspNetCore.Components.ComponentBase
+#nullable restore
+#line 12 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\_Imports.razor"
+using Assignment1.Shared.Components.SideBar;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 13 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\_Imports.razor"
+using Assignment1.Data.Persistence;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 14 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\_Imports.razor"
+using Assignment1.Data.Models;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 15 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\_Imports.razor"
+using Assignment1.Data.NotificationService;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 16 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\_Imports.razor"
+using Assignment1.Data.NotificationService.NotificationModel;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 17 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\_Imports.razor"
+using Assignment1.Shared.Components.NotificationsNew;
+
+#line default
+#line hidden
+#nullable disable
+    public partial class Notification : NotificationBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
         {
         }
         #pragma warning restore 1998
-#nullable restore
-#line 11 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\Shared\Components\Notifications\NotificationArea.razor"
-      
-    List<Notification> _notifications = new List<Notification>();
-
-    protected override void OnInitialized()
-    {
-        _notifications = NotificationManager.GetNotifications();
-        NotificationManager.Subscribe(this);
-        NotificationManager.AddNotification(new Notification()
-        {
-            Content = "Some text here that represents the body of the notification",
-            Title = "The title of the notification",
-            Severity = NotificationType.Error,
-        }
-            );
-        Console.WriteLine(_notifications.ToString());
-    }
-
-    public void ReactToNotification()
-    {
-        _notifications = NotificationManager.GetNotifications();
-        Console.WriteLine("this happened too");
-    }
-    
-    
-
-#line default
-#line hidden
-#nullable disable
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NotificationManager NotificationManager { get; set; }
     }
 }
 #pragma warning restore 1591

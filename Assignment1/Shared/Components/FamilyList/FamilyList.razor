@@ -1,5 +1,8 @@
 @using Assignment1.Data.Models
 @using Assignment1.Data.Persistence
+
+@inject FileContext FileContext;
+
 @attribute [Authorize]
 
 <div class="family-main" id="list">
@@ -24,11 +27,10 @@
 @code{
     private IList<Family> _families = new List<Family>();
     private IList<Family> _filteredFamilies = new List<Family>();
-    private FileContext _files = new FileContext();
 
     protected override void OnInitialized()
     {
-        _families = _files.Families;
+        _families = FileContext.Families;
         Filter(new ChangeEventArgs());
     }
 
