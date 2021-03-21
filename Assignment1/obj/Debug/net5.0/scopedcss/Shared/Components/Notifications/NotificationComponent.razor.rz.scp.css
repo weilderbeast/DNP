@@ -1,0 +1,33 @@
+.notification-body[b-25w3p8qbax]{
+    position: fixed;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    z-index: 1;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+    padding:20px;
+    width: 20vh;
+    border-radius: 15px;
+    background-color: black;
+    color: white;
+}
+
+.notifictaion-visible[b-25w3p8qbax]{
+    display: flex;
+}
+
+.notification-hidden[b-25w3p8qbax]{
+    display: none;
+}
+
+.notification-title[b-25w3p8qbax]{
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+.notification-content[b-25w3p8qbax]{
+    font-size: 16px;
+}
