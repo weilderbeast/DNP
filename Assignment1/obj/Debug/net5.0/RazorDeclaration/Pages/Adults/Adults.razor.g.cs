@@ -112,27 +112,34 @@ using Assignment1.Data.Models;
 #nullable disable
 #nullable restore
 #line 15 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\_Imports.razor"
-using Assignment1.Data.NotificationService;
+using Assignment1.Shared.Components.FamilyList;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 16 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\_Imports.razor"
-using Assignment1.Data.NotificationService.NotificationModel;
+using Assignment1.Shared.Components.Notifications;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 17 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\_Imports.razor"
-using Assignment1.Shared.Components.NotificationsNew;
+using Assignment1.Data.Notifications;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\Pages\Adults\Adults.razor"
+#line 18 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\_Imports.razor"
+using Assignment1.Data.Notifications.NotificationModel;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 7 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\Pages\Adults\Adults.razor"
            [Authorize]
 
 #line default
@@ -147,7 +154,7 @@ using Assignment1.Shared.Components.NotificationsNew;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 89 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\Pages\Adults\Adults.razor"
+#line 98 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\Pages\Adults\Adults.razor"
       
     private string fname;
     private string lname;
@@ -159,7 +166,8 @@ using Assignment1.Shared.Components.NotificationsNew;
     private string sex;
     private string job;
     private string salary;
-
+    private string street;
+    private string houseNr;
     public void Submit()
     {
         var Adult = new Adult();
@@ -179,11 +187,43 @@ using Assignment1.Shared.Components.NotificationsNew;
         System.Console.WriteLine(Adult.ToString());
 
         var id = FileContext.Adults.Last<Adult>().Id;
+        //Will later implement a list of just adults, for now i will use the list of families directly.
+
+        var Family = new Family(){
+            StreetName = street,
+            HouseNumber = Int32.Parse(houseNr)
+        };
+
+        Family.Adults.Add(Adult);
 
         Adult.Id = id + 1;
         FileContext.Adults.Add(Adult);
+        FileContext.Families.Add(Family);
+        //ValidateFamily(Family);
+        
 
+        
+        Notify(Adult);
         Clear();
+    }
+
+    private async void Notify(Adult Adult){
+        var content = "Successfully added " + Adult.FirstName + " " + Adult.LastName + " to the list";
+        var title = "Operation finished successfully";
+        await NotificationManager.Show(title, content, NotificationType.Success);
+    }
+
+    private void ValidateFamily(Family family){
+        var families = FileContext.Families;
+        //if a family with this name already exists, add the adult there, otherwise make it's own family
+        foreach(var fam in families){
+            if(fam.Adults[0].FirstName.Equals(family.Adults[0].LastName)){
+                fam.Adults.Add(family.Adults[0]);
+            } else{
+                FileContext.Families.Add(family);
+            }
+        }
+        FileContext.SaveChanges();
     }
 
     private void Clear()
@@ -198,12 +238,15 @@ using Assignment1.Shared.Components.NotificationsNew;
         weight = "";
         job = "";
         salary = "";
+        street = "";
+        houseNr = "";
     }
 
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NotificationManager NotificationManager { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private FileContext FileContext { get; set; }
     }
 }

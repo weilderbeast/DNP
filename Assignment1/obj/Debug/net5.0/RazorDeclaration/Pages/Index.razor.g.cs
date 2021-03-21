@@ -112,34 +112,34 @@ using Assignment1.Data.Models;
 #nullable disable
 #nullable restore
 #line 15 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\_Imports.razor"
-using Assignment1.Data.NotificationService;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
-#line 16 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\_Imports.razor"
-using Assignment1.Data.NotificationService.NotificationModel;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
-#line 17 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\_Imports.razor"
-using Assignment1.Shared.Components.NotificationsNew;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
-#line 1 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\Pages\Index.razor"
 using Assignment1.Shared.Components.FamilyList;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\Pages\Index.razor"
+#line 16 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\_Imports.razor"
+using Assignment1.Shared.Components.Notifications;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 17 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\_Imports.razor"
+using Assignment1.Data.Notifications;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 18 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\_Imports.razor"
+using Assignment1.Data.Notifications.NotificationModel;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 1 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\Pages\Index.razor"
            [Authorize]
 
 #line default
@@ -154,17 +154,12 @@ using Assignment1.Shared.Components.FamilyList;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 24 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\Pages\Index.razor"
+#line 25 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\Pages\Index.razor"
       
 
-    public void Notification()
+    private async void ShowNotification()
     {
-        NotificationManager.Push(new NotificationModel()
-        {
-            Title = "Title",
-            Content = "Content",
-            Type = NotificationType.Info
-        });
+       await NotificationManager.Show("Title","a simple paragraph", NotificationType.Info);
     }
 
 

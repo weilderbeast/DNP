@@ -27,7 +27,7 @@ namespace Assignment1.Data.Persistence
             }
         }
 
-        public void SaveChanges() 
+        public void SaveChanges()
         {
             // storing families
             string jsonFamilies = JsonSerializer.Serialize(Families, new JsonSerializerOptions

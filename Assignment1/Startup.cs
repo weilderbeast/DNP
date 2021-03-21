@@ -11,7 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Assignment1.Data;
 using Assignment1.Data.Login;
-using Assignment1.Data.NotificationService;
+using Assignment1.Data.Notifications;
 using Microsoft.AspNetCore.Components.Authorization;
 using Assignment1.Data.Persistence;
 
@@ -61,7 +61,6 @@ namespace Assignment1
             {
                 endpoints.MapBlazorHub();
                 endpoints.MapFallbackToPage("/Common/_Host");
-                
             });
         }
     }

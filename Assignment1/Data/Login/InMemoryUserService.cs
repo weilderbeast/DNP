@@ -20,7 +20,7 @@ namespace Assignment1.Data.Login
         {
             users.Add(first);
         }
-        
+
         public User ValidateUser(string Username, string Password)
         {
             var user = users.FirstOrDefault(user => user.Username.Equals(Username));

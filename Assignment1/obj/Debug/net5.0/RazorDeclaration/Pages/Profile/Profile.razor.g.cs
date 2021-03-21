@@ -112,21 +112,28 @@ using Assignment1.Data.Models;
 #nullable disable
 #nullable restore
 #line 15 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\_Imports.razor"
-using Assignment1.Data.NotificationService;
+using Assignment1.Shared.Components.FamilyList;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 16 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\_Imports.razor"
-using Assignment1.Data.NotificationService.NotificationModel;
+using Assignment1.Shared.Components.Notifications;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 17 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\_Imports.razor"
-using Assignment1.Shared.Components.NotificationsNew;
+using Assignment1.Data.Notifications;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 18 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\_Imports.razor"
+using Assignment1.Data.Notifications.NotificationModel;
 
 #line default
 #line hidden
@@ -154,21 +161,22 @@ using Assignment1.Data.Login;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 26 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\Pages\Profile\Profile.razor"
+#line 24 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\Pages\Profile\Profile.razor"
       
     private string username;
 
     protected override void OnInitialized()
     {
         base.OnInitialized();
-        username = ((CustomAuthProvider)AuthenticationStateProvider).GetCachedUser().Username;
+        username = ((CustomAuthProvider) AuthenticationStateProvider).GetCachedUser().Username;
     }
 
-    public void Logout(){
-        ((CustomAuthProvider)AuthenticationStateProvider).Logout();
+    public void Logout()
+    {
+        ((CustomAuthProvider) AuthenticationStateProvider).Logout();
         NavigationManager.NavigateTo("/login");
-
     }
+
 
 #line default
 #line hidden

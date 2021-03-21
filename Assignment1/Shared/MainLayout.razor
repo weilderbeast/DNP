@@ -2,14 +2,16 @@
 @inject NavigationManager NavigationManager;
 
 <div class="main">
-    <Notification />
     <NavMenu/>
     <SideBar/>
     @Body
+    <NotificationComponent/>
 </div>
-
+ 
 @code {
-    [CascadingParameter] protected Task<AuthenticationState> _task { get; set; }
+
+    [CascadingParameter]
+     protected Task<AuthenticationState> _task { get; set; }
 
     protected override async Task OnInitializedAsync()
     {

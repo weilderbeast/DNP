@@ -12,6 +12,72 @@
   "ProjectWorkspaceState": {
     "TagHelpers": [
       {
+        "HashCode": 525398743,
+        "Kind": "Components.Component",
+        "Name": "Assignment1.Pages.Adults.Adults",
+        "AssemblyName": "Assignment1",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Adults"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Assignment1.Pages.Adults.Adults"
+        }
+      },
+      {
+        "HashCode": -807908887,
+        "Kind": "Components.Component",
+        "Name": "Assignment1.Pages.Adults.Adults",
+        "AssemblyName": "Assignment1",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Assignment1.Pages.Adults.Adults"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Assignment1.Pages.Adults.Adults",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 327041827,
+        "Kind": "Components.Component",
+        "Name": "Assignment1.Pages.Index",
+        "AssemblyName": "Assignment1",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Index"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Assignment1.Pages.Index"
+        }
+      },
+      {
+        "HashCode": -78603017,
+        "Kind": "Components.Component",
+        "Name": "Assignment1.Pages.Index",
+        "AssemblyName": "Assignment1",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Assignment1.Pages.Index"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Assignment1.Pages.Index",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
         "HashCode": 226581822,
         "Kind": "Components.Component",
         "Name": "Assignment1.Pages.Login.Login",
@@ -78,68 +144,68 @@
         }
       },
       {
-        "HashCode": 327041827,
+        "HashCode": 1316161960,
         "Kind": "Components.Component",
-        "Name": "Assignment1.Pages.Index",
+        "Name": "Assignment1.Shared.Components.Notifications.NotificationBase",
         "AssemblyName": "Assignment1",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "Index"
+            "TagName": "NotificationBase"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Assignment1.Pages.Index"
+          "Common.TypeName": "Assignment1.Shared.Components.Notifications.NotificationBase"
         }
       },
       {
-        "HashCode": -78603017,
+        "HashCode": 2050499891,
         "Kind": "Components.Component",
-        "Name": "Assignment1.Pages.Index",
+        "Name": "Assignment1.Shared.Components.Notifications.NotificationBase",
         "AssemblyName": "Assignment1",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "Assignment1.Pages.Index"
+            "TagName": "Assignment1.Shared.Components.Notifications.NotificationBase"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Assignment1.Pages.Index",
+          "Common.TypeName": "Assignment1.Shared.Components.Notifications.NotificationBase",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
       {
-        "HashCode": 525398743,
+        "HashCode": -1877080563,
         "Kind": "Components.Component",
-        "Name": "Assignment1.Pages.Adults.Adults",
+        "Name": "Assignment1.Shared.Components.Notifications.NotificationComponent",
         "AssemblyName": "Assignment1",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "Adults"
+            "TagName": "NotificationComponent"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Assignment1.Pages.Adults.Adults"
+          "Common.TypeName": "Assignment1.Shared.Components.Notifications.NotificationComponent"
         }
       },
       {
-        "HashCode": -807908887,
+        "HashCode": 14703141,
         "Kind": "Components.Component",
-        "Name": "Assignment1.Pages.Adults.Adults",
+        "Name": "Assignment1.Shared.Components.Notifications.NotificationComponent",
         "AssemblyName": "Assignment1",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "Assignment1.Pages.Adults.Adults"
+            "TagName": "Assignment1.Shared.Components.Notifications.NotificationComponent"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Assignment1.Pages.Adults.Adults",
+          "Common.TypeName": "Assignment1.Shared.Components.Notifications.NotificationComponent",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -328,39 +394,6 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "Assignment1.Shared.Components.NavMenu.NavMenu",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": 367984210,
-        "Kind": "Components.Component",
-        "Name": "Assignment1.Shared.Components.Notifications.NotificationArea",
-        "AssemblyName": "Assignment1",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "NotificationArea"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Assignment1.Shared.Components.Notifications.NotificationArea"
-        }
-      },
-      {
-        "HashCode": 341937525,
-        "Kind": "Components.Component",
-        "Name": "Assignment1.Shared.Components.Notifications.NotificationArea",
-        "AssemblyName": "Assignment1",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Assignment1.Shared.Components.Notifications.NotificationArea"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Assignment1.Shared.Components.Notifications.NotificationArea",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -16155,6 +16188,11 @@
     {
       "FilePath": "c:\\Users\\cirst\\RiderProjects\\Assignment1\\Assignment1\\Shared\\Components\\SideBar\\SideBar.razor",
       "TargetPath": "Shared\\Components\\SideBar\\SideBar.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\cirst\\RiderProjects\\Assignment1\\Assignment1\\Shared\\Components\\Notifications\\NotificationComponent.razor",
+      "TargetPath": "Shared\\Components\\Notifications\\NotificationComponent.razor",
       "FileKind": "component"
     },
     {

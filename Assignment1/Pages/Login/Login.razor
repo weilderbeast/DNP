@@ -4,7 +4,7 @@
 @inject AuthenticationStateProvider AuthenticationStateProvider;
 @inject NavigationManager NavigationManager;
 
-<AuthorizeView> 
+<AuthorizeView>
     <NotAuthorized>
         <div class="main">
             <div class="login">
@@ -38,25 +38,33 @@
     private string password;
     private string errorMessage;
 
-    public async Task LoginTask() {
+    public async Task LoginTask()
+    {
         errorMessage = "";
-        try {
+        try
+        {
             ((CustomAuthProvider) AuthenticationStateProvider).ValidateLogin(username, password);
             username = "";
             password = "";
-        } catch (Exception e) {
+        }
+        catch (Exception e)
+        {
             errorMessage = e.Message;
         }
     }
 
-    public async Task Logout() {
+    public async Task Logout()
+    {
         errorMessage = "";
         username = "";
         password = "";
-        try {
+        try
+        {
             ((CustomAuthProvider) AuthenticationStateProvider).Logout();
             NavigationManager.NavigateTo("/");
-        } catch (Exception e) { 
+        }
+        catch (Exception e)
+        {
             System.Console.WriteLine(e);
         }
     }

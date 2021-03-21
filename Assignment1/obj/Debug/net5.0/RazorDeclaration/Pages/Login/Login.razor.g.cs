@@ -112,21 +112,28 @@ using Assignment1.Data.Models;
 #nullable disable
 #nullable restore
 #line 15 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\_Imports.razor"
-using Assignment1.Data.NotificationService;
+using Assignment1.Shared.Components.FamilyList;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 16 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\_Imports.razor"
-using Assignment1.Data.NotificationService.NotificationModel;
+using Assignment1.Shared.Components.Notifications;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 17 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\_Imports.razor"
-using Assignment1.Shared.Components.NotificationsNew;
+using Assignment1.Data.Notifications;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 18 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\_Imports.razor"
+using Assignment1.Data.Notifications.NotificationModel;
 
 #line default
 #line hidden
@@ -154,25 +161,33 @@ using Assignment1.Data.Login;
     private string password;
     private string errorMessage;
 
-    public async Task LoginTask() {
+    public async Task LoginTask()
+    {
         errorMessage = "";
-        try {
+        try
+        {
             ((CustomAuthProvider) AuthenticationStateProvider).ValidateLogin(username, password);
             username = "";
             password = "";
-        } catch (Exception e) {
+        }
+        catch (Exception e)
+        {
             errorMessage = e.Message;
         }
     }
 
-    public async Task Logout() {
+    public async Task Logout()
+    {
         errorMessage = "";
         username = "";
         password = "";
-        try {
+        try
+        {
             ((CustomAuthProvider) AuthenticationStateProvider).Logout();
             NavigationManager.NavigateTo("/");
-        } catch (Exception e) { 
+        }
+        catch (Exception e)
+        {
             System.Console.WriteLine(e);
         }
     }

@@ -112,21 +112,28 @@ using Assignment1.Data.Models;
 #nullable disable
 #nullable restore
 #line 15 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\_Imports.razor"
-using Assignment1.Data.NotificationService;
+using Assignment1.Shared.Components.FamilyList;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 16 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\_Imports.razor"
-using Assignment1.Data.NotificationService.NotificationModel;
+using Assignment1.Shared.Components.Notifications;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 17 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\_Imports.razor"
-using Assignment1.Shared.Components.NotificationsNew;
+using Assignment1.Data.Notifications;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 18 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\_Imports.razor"
+using Assignment1.Data.Notifications.NotificationModel;
 
 #line default
 #line hidden
@@ -146,10 +153,12 @@ using Data.Models;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 28 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\Shared\Components\FamilyList\FamilyListing.razor"
+#line 31 "C:\Users\cirst\RiderProjects\Assignment1\Assignment1\Shared\Components\FamilyList\FamilyListing.razor"
       
+
     [Parameter]
     public Family Family { get; set; }
+
     private bool isOpen = false;
     private string cssClass = "family-item .";
 
@@ -165,6 +174,7 @@ using Data.Models;
             cssClass = cssClass.Replace("open", ".");
         }
     }
+
 
 #line default
 #line hidden

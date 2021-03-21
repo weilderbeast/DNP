@@ -21,7 +21,8 @@ namespace Assignment1.Data.Login
             _userService = userService;
         }
 
-        public User GetCachedUser(){
+        public User GetCachedUser()
+        {
             return _cachedUser;
         }
 

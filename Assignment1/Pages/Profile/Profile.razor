@@ -21,20 +21,19 @@
 </div>
 
 
-
-
 @code{
     private string username;
 
     protected override void OnInitialized()
     {
         base.OnInitialized();
-        username = ((CustomAuthProvider)AuthenticationStateProvider).GetCachedUser().Username;
+        username = ((CustomAuthProvider) AuthenticationStateProvider).GetCachedUser().Username;
     }
 
-    public void Logout(){
-        ((CustomAuthProvider)AuthenticationStateProvider).Logout();
+    public void Logout()
+    {
+        ((CustomAuthProvider) AuthenticationStateProvider).Logout();
         NavigationManager.NavigateTo("/login");
-
     }
+
 }

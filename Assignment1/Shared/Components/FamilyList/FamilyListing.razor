@@ -2,14 +2,17 @@
 
 
 <div class="@cssClass" @onclick="openDetails">
-    
+
     <span>
-        @if(!isOpen){
+        @if (!isOpen)
+        {
             <img src="/icons/down-arrow.svg" height="12" width="12">
-        } else {
+        }
+        else
+        {
             <img src="/icons/down-arrow.svg" height="12" width="12" style="transform: rotate(180deg) scaleX(-1);">
         }
-        
+
     </span>
     <div class="family-name">
         @Family.Adults[0].LastName
@@ -18,16 +21,18 @@
         @Family.StreetName
     </div>
     <div class="family-count">
-        @Family.Children.Count kids,
-        @Family.Pets.Count pets
+        @Family.Children?.Count kids,
+        @Family.Pets?.Count pets
     </div>
 </div>
-<FamilyDetails Open=@isOpen Family=@Family />
+<FamilyDetails Open=@isOpen Family=@Family/>
 
 
 @code{
+
     [Parameter]
     public Family Family { get; set; }
+
     private bool isOpen = false;
     private string cssClass = "family-item .";
 
@@ -43,4 +48,5 @@
             cssClass = cssClass.Replace("open", ".");
         }
     }
+
 }

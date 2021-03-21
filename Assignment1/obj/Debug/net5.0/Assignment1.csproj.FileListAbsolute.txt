@@ -76,6 +76,6 @@ C:\Users\cirst\RiderProjects\Assignment1\Assignment1\obj\Debug\net5.0\scopedcss\
 C:\Users\cirst\RiderProjects\Assignment1\Assignment1\obj\Debug\net5.0\RazorDeclaration\Pages\Profile\Profile.razor.g.cs
 C:\Users\cirst\RiderProjects\Assignment1\Assignment1\obj\Debug\net5.0\Razor\Pages\Profile\Profile.razor.g.cs
 C:\Users\cirst\RiderProjects\Assignment1\Assignment1\obj\Debug\net5.0\scopedcss\Pages\Profile\Profile.razor.rz.scp.css
-C:\Users\cirst\RiderProjects\Assignment1\Assignment1\obj\Debug\net5.0\RazorDeclaration\Shared\Components\NotificationsNew\Notification.razor.g.cs
-C:\Users\cirst\RiderProjects\Assignment1\Assignment1\obj\Debug\net5.0\Razor\Shared\Components\NotificationsNew\Notification.razor.g.cs
-C:\Users\cirst\RiderProjects\Assignment1\Assignment1\obj\Debug\net5.0\scopedcss\Shared\Components\NotificationsNew\Notification.razor.rz.scp.css
+C:\Users\cirst\RiderProjects\Assignment1\Assignment1\obj\Debug\net5.0\RazorDeclaration\Shared\Components\Notifications\NotificationComponent.razor.g.cs
+C:\Users\cirst\RiderProjects\Assignment1\Assignment1\obj\Debug\net5.0\Razor\Shared\Components\Notifications\NotificationComponent.razor.g.cs
+C:\Users\cirst\RiderProjects\Assignment1\Assignment1\obj\Debug\net5.0\scopedcss\Shared\Components\Notifications\NotificationComponent.razor.rz.scp.css

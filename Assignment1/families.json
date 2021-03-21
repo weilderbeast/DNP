@@ -1185,5 +1185,97 @@
       }
     ],
     "Pets": []
+  },
+  {
+    "StreetName": "Stevedorevej ",
+    "HouseNumber": 17,
+    "Adults": [
+      {
+        "JobTitle": {
+          "JobTitle": "Student",
+          "Salary": 0
+        },
+        "Id": 16,
+        "FirstName": "Bogdan-Florin",
+        "LastName": "Cirstoiu",
+        "HairColor": "Black",
+        "EyeColor": "Brown",
+        "Age": 20,
+        "Weight": 73,
+        "Height": 183,
+        "Sex": "M"
+      }
+    ],
+    "Children": [],
+    "Pets": []
+  },
+  {
+    "StreetName": "Kamjatka str",
+    "HouseNumber": 69,
+    "Adults": [
+      {
+        "JobTitle": {
+          "JobTitle": "Student",
+          "Salary": 0
+        },
+        "Id": 17,
+        "FirstName": "Grosu",
+        "LastName": "Ionut",
+        "HairColor": "Black",
+        "EyeColor": "Brown",
+        "Age": 20,
+        "Weight": 82,
+        "Height": 187,
+        "Sex": "M"
+      }
+    ],
+    "Children": [],
+    "Pets": []
+  },
+  {
+    "StreetName": "Stevedorevej 17",
+    "HouseNumber": 420,
+    "Adults": [
+      {
+        "JobTitle": {
+          "JobTitle": "Teacher",
+          "Salary": 12345
+        },
+        "Id": 18,
+        "FirstName": "Troels",
+        "LastName": "Mortensen",
+        "HairColor": "Brown",
+        "EyeColor": "Brown",
+        "Age": 35,
+        "Weight": 90,
+        "Height": 185,
+        "Sex": "M"
+      }
+    ],
+    "Children": [],
+    "Pets": []
+  },
+  {
+    "StreetName": "Cool street ave",
+    "HouseNumber": 420,
+    "Adults": [
+      {
+        "JobTitle": {
+          "JobTitle": "Teacher",
+          "Salary": 12345
+        },
+        "Id": 19,
+        "FirstName": "Adult",
+        "LastName": "Big",
+        "HairColor": "Brown",
+        "EyeColor": "Brown",
+        "Age": 45,
+        "Weight": 100,
+        "Height": 190,
+        "Sex": "M"
+      }
+    ],
+    "Children": [],
+    "Pets": []
   }
 ]

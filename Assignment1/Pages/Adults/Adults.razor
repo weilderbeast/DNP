@@ -1,6 +1,7 @@
 @page "/Adults"
 
 @inject FileContext FileContext;
+@inject NotificationManager NotificationManager;
 
 
 @attribute [Authorize]
@@ -16,12 +17,12 @@
                     <div class="form-group">
                         <label class="label" for="fname">First name</label>
                         <input class="input" type="text" id="fname" name="fname" placeholder="first name..."
-                            @bind-value="@fname">
+                               @bind-value="@fname">
                     </div>
                     <div class="form-group">
                         <label class="label" for="lname">Last name</label>
                         <input class="input" type="text" id="lname" name="lname" placeholder="last name..."
-                            @bind-value="@lname">
+                               @bind-value="@lname">
                     </div>
                     <div class="form-group">
                         <label class="label" for="age">Age</label>
@@ -31,7 +32,7 @@
                         <label class="label" for="sex">Sex</label>
                         <!-- Unfortunately, the option tags cannot be edited via css, as they are handled by 
                         the os of the browser they're running on -->
-                        <select class="input" style="width: 212px; height: 34px;">
+                        <select class="input" style="width: 212px; height: 34px;" @bind="@sex">
                             <option value="">
                                 Select sex
                             </option>
@@ -49,22 +50,22 @@
                     <div class="form-group">
                         <label class="label" for="hair-color">Hair color</label>
                         <input class="input" type="text" id="hair-color" name="hair-color" placeholder="hair color..."
-                            @bind-value="@hairColor">
+                               @bind-value="@hairColor">
                     </div>
                     <div class="form-group">
                         <label class="label" for="eye-color">Eye color</label>
                         <input class="input" type="text" id="eye-color" name="eye-color" placeholder="eye color..."
-                            @bind-value="@eyeColor">
+                               @bind-value="@eyeColor">
                     </div>
                     <div class="form-group">
                         <label class="label" for="height">Height</label>
                         <input class="input" type="text" id="height" name="height" placeholder="height..."
-                            @bind-value="@height">
+                               @bind-value="@height">
                     </div>
                     <div class="form-group">
                         <label class="label" for="weight">Weight</label>
                         <input class="input" type="text" id="weight" name="weight" placeholder="weight..."
-                            @bind-value="@weight">
+                               @bind-value="@weight">
                     </div>
                 </div>
                 <div class="form-section">
@@ -75,7 +76,16 @@
                     <div class="form-group">
                         <label class="label" for="salary">Salary</label>
                         <input class="input" type="text" id="salary" name="salary" placeholder="salary..."
-                            @bind-value="@salary">
+                               @bind-value="@salary">
+                    </div>
+                    <div class="form-group">
+                        <label class="label" for="street">Street name</label>
+                        <input class="input" type="text" id="street" name="street" placeholder="street name..." @bind-value="@street">
+                    </div>
+                    <div class="form-group">
+                        <label class="label" for="house-nr">House nr</label>
+                        <input class="input" type="number" id="house-nr" name="house-nr" placeholder="house nr..."
+                               @bind-value="@houseNr">
                     </div>
                 </div>
             </div>
@@ -83,7 +93,6 @@
         </form>
     </div>
 </div>
-
 
 
 @code{
@@ -97,7 +106,8 @@
     private string sex;
     private string job;
     private string salary;
-
+    private string street;
+    private string houseNr;
     public void Submit()
     {
         var Adult = new Adult();
@@ -117,11 +127,43 @@
         System.Console.WriteLine(Adult.ToString());
 
         var id = FileContext.Adults.Last<Adult>().Id;
+        //Will later implement a list of just adults, for now i will use the list of families directly.
+
+        var Family = new Family(){
+            StreetName = street,
+            HouseNumber = Int32.Parse(houseNr)
+        };
+
+        Family.Adults.Add(Adult);
 
         Adult.Id = id + 1;
         FileContext.Adults.Add(Adult);
+        FileContext.Families.Add(Family);
+        //ValidateFamily(Family);
+        
 
+        
+        Notify(Adult);
         Clear();
+    }
+
+    private async void Notify(Adult Adult){
+        var content = "Successfully added " + Adult.FirstName + " " + Adult.LastName + " to the list";
+        var title = "Operation finished successfully";
+        await NotificationManager.Show(title, content, NotificationType.Success);
+    }
+
+    private void ValidateFamily(Family family){
+        var families = FileContext.Families;
+        //if a family with this name already exists, add the adult there, otherwise make it's own family
+        foreach(var fam in families){
+            if(fam.Adults[0].FirstName.Equals(family.Adults[0].LastName)){
+                fam.Adults.Add(family.Adults[0]);
+            } else{
+                FileContext.Families.Add(family);
+            }
+        }
+        FileContext.SaveChanges();
     }
 
     private void Clear()
@@ -136,6 +178,8 @@
         weight = "";
         job = "";
         salary = "";
+        street = "";
+        houseNr = "";
     }
 
 }
